@@ -39,11 +39,11 @@ icon: heart
 - C/C++, Java, Python, MSSQL, MongogDB, QT, Assembly(MASM) On Windows, Linux, RTOS, Docker
 
 
->## Work Experience
-
+>## Work Experience  
 ### Mar 2004–present	LG Electronics  Seoul, Korea  
 #### Position Title : Software Project Leader/Manager  
 ##### Role1 :  As Project Leader, manager the Risk of schedule and requirement.  
+
 **Project Leader : North American area (Verizon Wireless Phone, VX9800, VX9900).** 
 
 - Adjust between the Client Requirement and the level of LG Implementation
@@ -79,7 +79,9 @@ icon: heart
 
 ---
 ### June 2002–Dec 2003 	                                      Motorola Korea, Seoul
+
 #### Position Title : Embedded Software Engineer & Function Leader
+
 ##### Role : Writing Device Driver for Mobile Phone and Function Leader of Bluetooth Profile  Which was based on REX ( Qualcomm Real time OS ) 
 
 - Wrote Device Driver : LCD, NOR Flash Memory, Power management
@@ -93,7 +95,9 @@ icon: heart
  
 ---
 ### April 2000–June 2002	 Synertek Korea inc. (startup company)            Seoul, Korea
+
 #### Position Title : Embedded Software Engineer
+
 ##### Role : Writing device driver for PDA-supporting Chip Design.
 
 - Wrote device driver : USB image, USB Storage, Camera H/W Design.
@@ -103,7 +107,8 @@ icon: heart
 
 ---
 ### Feb 1990–Mar 2000	, SAMSUNG,  Semi-conductor Business Division GiHeuong, Korea
-#### Position Title : Embedded Software Engineer
+
+#### Position Title : Embedded Software Engineer  
 ##### Role : Writing Display device driver with Graphic Semi-conductor Chip Design Team
 
 - Analyze a 2D graphic algorithm in Windows 
