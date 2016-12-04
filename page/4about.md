@@ -40,8 +40,11 @@ icon: heart
 
 
 >## Work Experience  
+
 ### Mar 2004–present	LG Electronics  Seoul, Korea  
+
 #### Position Title : Software Project Leader/Manager  
+
 ##### Role1 :  As Project Leader, manager the Risk of schedule and requirement.  
 
 **Project Leader : North American area (Verizon Wireless Phone, VX9800, VX9900).** 
@@ -78,6 +81,7 @@ icon: heart
  - monitoring the trend of FFR ( Field Fail Rate )
 
 ---
+
 ### June 2002–Dec 2003 	                                      Motorola Korea, Seoul
 
 #### Position Title : Embedded Software Engineer & Function Leader
@@ -94,6 +98,7 @@ icon: heart
 
  
 ---
+
 ### April 2000–June 2002	 Synertek Korea inc. (startup company)            Seoul, Korea
 
 #### Position Title : Embedded Software Engineer
@@ -106,9 +111,11 @@ icon: heart
 - Guide a H/W design Structure :  JPEG, MPEG4
 
 ---
+
 ### Feb 1990–Mar 2000	, SAMSUNG,  Semi-conductor Business Division GiHeuong, Korea
 
 #### Position Title : Embedded Software Engineer  
+
 ##### Role : Writing Display device driver with Graphic Semi-conductor Chip Design Team
 
 - Analyze a 2D graphic algorithm in Windows 
