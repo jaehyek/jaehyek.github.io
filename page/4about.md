@@ -162,7 +162,7 @@ icon: heart
  - Object Segmentation and Detection, Object Classification using SVM
 
 
-## contact me
+>## contact me
 
 * GitHub：[jaehyek](https://github.com/jaehyek)
 * email：jaehyek@gmail.com
@@ -170,7 +170,7 @@ icon: heart
 * [Facebook](https://www.facebook.com/jaehyek.choi.1)
 
 
-## About this site
+>## About this site
 
 **If you would like to use this jekyll blog topic, please visit：[https://github.com/jaehyek/jaehyek.github.io](https://github.com/jaehyek/jaehyek.github.io)**
 
