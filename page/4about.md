@@ -36,6 +36,7 @@ icon: heart
 - Manager : Validation of Quality, and Improvement of Field Defect
 
 **Programming Language and Developing Environment:** 
+
 - C/C++, Java, Python, MSSQL, MongogDB, QT, Assembly(MASM) On Windows, Linux, RTOS, Docker
 
 
