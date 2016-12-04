@@ -144,7 +144,7 @@ icon: heart
 - Intel 8086, 80386, pentium
 - ARM ( ARM7TDMI, ARM926 ) 
 
-###Tools and Equipment
+### Tools and Equipment
 - ClearCase ( Software version management tool), git
 - WinDbg, SoftICE, TRACE32 + JTAG
 - Logic Analyzer( HP ) 
