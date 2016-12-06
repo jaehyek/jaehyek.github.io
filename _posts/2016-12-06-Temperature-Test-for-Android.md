@@ -8,6 +8,8 @@ author: Jaehyek
 ---
 ## Descriptions of how to setup the Qt5 and  how to make scripts
 
+### 0. Assume that Python 3.5 is already installed at your system. 
+
 ### 1. download and install the "Qt 5.7.0 for Windows 64-bit (VS 2015, 918 MB)" 
 please refer to here [here](https://www.qt.io/download-open-source/#section-2)
 
@@ -31,11 +33,11 @@ please refer to [PyQt5 Reference Guide](http://pyqt.sourceforge.net/Docs/PyQt5/)
 
 ### 4. create the UI file of Qt5 using Qt Creator  like below imaage.
 
-![QtUI](/img/Qt/QtUI.jpg)
+![QtUI](/img/Qt/QtUI.JPG)
 
 ### 5. Qt programming for Android Phone Temperature Test 
 
-** import and  _main__ **
+**import and  main** 
 
 ```
 from PyQt5.QtWidgets import QDialog, QMessageBox
@@ -52,7 +54,7 @@ if __name__ == "__main__":
     myapp.Update_data()
 ```
 
-** GUIForm class, QThread, QTimer **
+**GUIForm class, QThread, QTimer**
 
 ```
 class GUIForm(QDialog):
@@ -77,5 +79,5 @@ class GUIForm(QDialog):
 
 ### Final. run the Python scripts.  Below is the working screen .
 
-![QtTempTest](/img/Qt/QtTempTest.jpg)
+![QtTempTest](/img/Qt/QtTempTest.JPG)
 
