@@ -3,6 +3,7 @@ layout: post
 title:  "HTML CSS list"
 categories: html
 tags:  html css
+comment: true
 author: Jaehyek
 ---
 

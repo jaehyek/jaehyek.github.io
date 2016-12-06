@@ -2,6 +2,7 @@
 layout: post
 title:  "Welcome to StackEdit!"
 categories: html
+comments: true
 tags:  Markdown syntax
 author: Jaehyek
 ---
