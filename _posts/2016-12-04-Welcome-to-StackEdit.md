@@ -7,7 +7,7 @@ author: Jaehyek
 ---
 
 
-이 site 을 참조하자: [here](https://stackedit.io/editor)
+Web Markdown editor은  이 site 을 참조하자: [here](https://stackedit.io/editor)
 
 혹은 한글설명은 [여기](http://sergeswin.com/1013#)에서 참조하자
 
