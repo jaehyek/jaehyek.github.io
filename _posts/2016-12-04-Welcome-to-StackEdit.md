@@ -32,7 +32,11 @@ Web Markdown editor은  이 site 을 참조하자: [here](https://stackedit.io/e
 
 * 사과
 
-###참고: 숫자 목록으로 내용을 시작한 뒤 어떤 이유로 인해 글 머리 기호 목록을 바로 다음에 넣고 싶다면, 두 목록 사이를 제목이나 부제목으로 서로 분리시켜줘야 합니다. 이렇게 하지 않으면 마크다운이 다음 목록 항목을 알맞게 처리하지 않을 겁니다.
+<iframe title="YouTube video player" class="youtube-player" type="text/html" 
+width="640" height="390" src="http://www.youtube.com/embed/W-Q7RMpINVo"
+frameborder="0" allowFullScreen></iframe>
+
+### 참고: 숫자 목록으로 내용을 시작한 뒤 어떤 이유로 인해 글 머리 기호 목록을 바로 다음에 넣고 싶다면, 두 목록 사이를 제목이나 부제목으로 서로 분리시켜줘야 합니다. 이렇게 하지 않으면 마크다운이 다음 목록 항목을 알맞게 처리하지 않을 겁니다.
 
 * 바나나
 * 수박
@@ -54,6 +58,13 @@ Web Markdown editor은  이 site 을 참조하자: [here](https://stackedit.io/e
 
 ## 이미지 넣기
 ![Alt text](/img/jaehyek.jpg)
+
+
+## Youtube 넣기
+
+> 만일 Youtube 주소가 https://www.youtube.com/watch?v=**GDsmyigv9tw** 이면 
+> <iframe width="420" height="315" src="https://www.youtube.com/embed/GDsmyigv9tw" frameborder="0" allowfullscreen></iframe>
+
 
 구글 로고입니다:  
 참고: 참조 문자는 이미지를 구분할 수 있도록 돕는 이름이면 어떤 것이든 쓸 수 있습니다.
