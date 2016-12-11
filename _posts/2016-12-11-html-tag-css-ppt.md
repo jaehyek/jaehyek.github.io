@@ -76,7 +76,7 @@ author: Jaehyek
 ---
 
 
-### 이번 강의는 CSS  속성-IV편입니다.
+### 이번 강의는 CSS  기본-IV편입니다.
 
 >* 문자 선택자
 * 링크 선택자
@@ -85,7 +85,7 @@ author: Jaehyek
 [ppt doc](/attach/ppt/Practice_CSS_base_4.pptx)
 ---
 
-### 강의 내용
+### 강의 내용 속성 1편
 >* CSS3 단위
 * url()
 * display 속성
@@ -96,7 +96,7 @@ author: Jaehyek
 ---
 
 
-### 강의 내용
+### 강의 내용 속성 2편
 >* margin 및 padding 속성
 * box-sizing 속성
 * border 속성
@@ -104,7 +104,7 @@ author: Jaehyek
 
 [ppt doc](/attach/ppt/Practice_CSS_attr_2.pptx)
 ---
-### 강의 내용
+### 강의 내용 속성 3편
 >* font-family , font-size 속성
 * font-style, font-weight, line-height 속성
 * text-align, text-decoration 속성
@@ -113,7 +113,7 @@ author: Jaehyek
 [ppt doc](/attach/ppt/Practice_CSS_attr_3.pptx)
 ---
 
-### 강의 내용
+### 강의 내용 속성 4편
 >* float 속성
 * gradient 속성
 
