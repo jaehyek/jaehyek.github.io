@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        
+        #header {
+            width:500px; 
+            background-color:#ffd800; 
+            border:1px solid #808080;
+            text-align:center;
+        }
+
+        #wrap {
+            width:500px; 
+            background-color:#66dbf6; 
+            border:2px solid #808080;
+            text-align:center;
+            overflow:hidden;
+        }
+
+        #content {
+            width:350px;
+            border:1px solid red;
+            float:left;
+        }
+
+        #side_banner {
+            border:1px solid red;
+            float:left;
+        }
+
+        #footer {
+            clear:both;
+            width:500px; 
+            background-color:#ffd800; 
+            border:3px solid #808080;
+            text-align:center;
+        }
+
+        ul li.menu {
+            color:#350a5b;
+            font-weight:bold;
+            font-size:30px;
+        }
+
+        input {
+            color:green;
+            font-size:30px;
+            font-weight:bold;
+        }
+
+        input[type=text] {
+            color:orange;
+            font-size:50px;
+            width:200px;
+        }
+
+        input[type=tel] {
+            color:red;
+        }
+
+        img[src] {
+            border:5px solid green;
+        }
+
+        div li {
+            background-color:red;
+        }
+
+        div p {
+            font-size:25px;
+        }
+
+        div > h1 {
+            font-weight:bold;
+            color:yellow;
+        }
+
+        h3~div {
+            font-size:10px;
+            color:orange
+        }
+
+        h3+div {
+            font-size:20px;
+            font-weight:bold;
+            color:blue;
+        }
+
+        #title~div {
+            width:300px;
+            background-color:yellow;
+        }
+
+        li:hover {
+            color:blue;
+        }
+
+        input:focus {
+            border:2px solid #ff0000;
+            padding:10px;
+        }
+
+        input:enabled {
+            color:#00ff00;
+            font-weight:bold;
+        }
+
+        input:disabled {
+            color:#ff0000;
+        }
+
+        ul li:nth-child(2n+1) {
+            background-color:#de9393;
+        }
+
+        ul li:first-child, ul li:last-child {
+            background-color:yellow;
+        }
+
+        ul li:first-child {
+            border-radius:10px 10px 0 0;
+        }
+
+        ul li:last-child {
+            border-radius:0 0 10px 10px;
+        }
+
+        ul li:first-of-type {
+            border-radius : 10px 10px 0 0;
+        }
+
+        ul li:last-of-type {
+            border-radius : 0 0 10px 30px;
+        }
+
+        #history2:first-letter, #history1:first-letter{
+            font-size:2em;
+        }
+
+        #history2:first-line, #history1:first-line{
+            font-weight:bold;
+            color:#2160d1;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>HEADER</h1>
+    </div>
+
+    <div id="wrap">
+        <div id="content">
+            <h1>CONTENT</h1>
+            <ul>
+                <li class="menu">menu1</li>
+                <li>menu2</li>
+                <li class="menu">menu3</li>
+                <li>menu4</li>
+                <li class="menu">menu5</li>
+            </ul>
+            <ol>
+                <li class="menu">menu1</li>
+                <li>menu2</li>
+                <li class="menu">menu3</li>
+                <li>menu4</li>
+                <li class="menu">menu5</li>
+            </ol>
+        </div>
+        <div id="side_banner">
+            <h1>BANNER</h1>
+            <a href="http://www.sba.seoul.kr" target="_blank"><img src="http://www.sba.seoul.kr/kr/images/footer/f_logo.png"></a>
+        </div>
+    </div>
+
+    <form>
+        이름 : <input type="text"/> <br />
+        아이디 : <input type="text" /> <br />
+        비밀번호 : <input type="password" /> <br />
+        전화번호 : <input type="tel" /> <br />
+    </form>
+
+    <img src="http://www.sba.seoul.kr/kr/images/header/Navi_dr.png" /> <br />
+
+    <div id="wrap">
+        <p>서울시 8대 신성장동력의 하나인 녹색산업을 집중 육성하기 위해 녹색기업에 특화된 지원기관인 녹색산업지원센터는 녹색중소기업의 종합 지원체계를 구축하고 실질적 성과창출을 유도하여 서울형 녹색산업 인프라 조성과 효율적인 지원사업 시행으로 녹색중소기업의 경영내실화 및 산업 저변확대에 기여하는 것이 목적</p>
+        <ul>
+            <li><p>서울애니메이션센터</p></li>
+            <li><h1>서울시녹색산업지원센터</h1></li>
+            <li><p>DMC(디지털미디어시티)</p></li>
+            <li><h1>서울게임콘텐츠센터</h1></li>
+            <li><p>서울시우수사회적기업지원</p></li>
+            <li><h1>캐릭터포털사이트</h1></li>
+            <li><p>재미로/재미랑</p></li>
+        </ul>
+    </div>
+
+    <h3 id="title">div > h1 : div바로 아래에 있는 h1 선택 </h3>
+    <h3 id="title">동위 선택자(+, ~) ~:후손 전부, +:자손만  선택</h3>
+    <div>div_01</div>
+    <div>div_02</div>
+    <div>div_03</div>
+    <div>div_04</div>
+    <div>div_05</div>
+
+    <div id="content">
+        <p>
+            중소기업 지원업무의 전문성과 효율성을 확보하고 중소기업에 대한 기술, 경영, 인력 등의 종합지원체계를 구축함으로써 중소기업의 경쟁력 제고를 위해 설립된 서울산업진흥원은 중소기업의자생력을 키우고 안정적인 경영여건을 조성하기 위하여 끊임없이 노력하고 있습니다.
+        </p>
+        <p id="history2">
+            2014 04월 09일<br />서울산업진흥원 사명변경06월 30일 서울산업진흥원 상암DMC 이전
+        </p>
+        <p id="history1">
+            2013 01월 12일<br />다누리 시민청 개관05월 09일 꿈꾸는청년가게 명동점 개관05월 10일 큐비드 광화문 개관06월 21일 다누리 강남점 개관07월 20일 서울크리에티브랩 개관08월 27일 다누리 성북점 개관
+        </p>
+    </div>
+
+    <div id="footer">
+        <img src="http://www.sba.seoul.kr/kr/images/footer/copyright.png">
+    </div>
+</body>
+</html>

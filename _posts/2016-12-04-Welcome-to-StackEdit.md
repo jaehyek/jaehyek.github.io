@@ -25,6 +25,11 @@ Web Markdown editor은  이 site 을 참조하자: [here](https://stackedit.io/e
 
 혹은 별표 하나만 사용해도 글자를 *기울일 수* 있습니다.
 
+* 사과
+* 복숭아
+* 포도
+
+
 1. 사과
 2. 복숭아
 3. 포도
