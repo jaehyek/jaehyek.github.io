@@ -35,7 +35,7 @@ please refer to [PyQt5 Reference Guide](http://pyqt.sourceforge.net/Docs/PyQt5/)
 
 ### 4. create the UI file of Qt5 using Qt Creator  like below image.
 
-![QtUI](/img/Qt/QtUI.JPG)
+![QtUI](/img/2016-12-06-How-to-use-Qt5/QtUI.JPG)
 
 ### 5. Qt programming for Android Phone Temperature Test 
 
@@ -225,5 +225,5 @@ class Get_Temp_from_Phone(QThread):    # Power On/Off Thread
 
 ### Final. run the Python scripts.  Below is the working screen .
 
-![QtTempTest](/img/Qt/QtTempTest.JPG)
+![QtTempTest](/img/2016-12-06-How-to-use-Qt5/QtTempTest.JPG)
 

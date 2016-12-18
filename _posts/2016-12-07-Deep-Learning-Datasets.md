@@ -3,7 +3,7 @@ layout: post
 title:  "Deep Learning Datasets"
 categories: DeepLearning
 comments: true
-tags:  DeepLearning, Datasets
+tags:  DeepLearning Datasets
 author: Jaehyek
 ---
 

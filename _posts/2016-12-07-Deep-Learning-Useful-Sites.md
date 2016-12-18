@@ -3,7 +3,7 @@ layout: post
 title:  "Deep Learning Useful Sites"
 categories: DeepLearning
 comments: true
-tags:  DeepLearning, MachineLearning
+tags:  DeepLearning MachineLearning
 author: Jaehyek
 ---
 
