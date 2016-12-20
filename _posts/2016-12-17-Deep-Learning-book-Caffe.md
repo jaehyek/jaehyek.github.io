@@ -1,11 +1,12 @@
 ---
 layout: post
 title:  "BOOK-가장 빨리 만나는 딥러닝 with Caffe"
-categories: DeepLearning
+categories: Deep-Learning
 comments: true
-tags:  DeepLearning book Caffe
+tags:  Deep-Learning book Caffe
 author: Jaehyek
 ---
+
 
 # 2.2 음성 인식 분야의 성과
 - Baidu Deep Speech은 Bi-directional Recurrent Neural Network

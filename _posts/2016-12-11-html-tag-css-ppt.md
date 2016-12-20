@@ -16,7 +16,7 @@ author: Jaehyek
 * HTML태그 개요
 * h1,p,br,a,b,i,sup,ins,del 태그
 
-[ppt doc](/attach/ppt/Practice_HTML_base_1.pptx)
+[ppt doc](/attach/ppt/2016-12-11-html-tag-css-ppt/Practice_HTML_base_1.pptx)
 ---
 
 ### 이번 강의는 HTML  기본-II편입니다.
@@ -27,7 +27,7 @@ author: Jaehyek
 * 사운드를 출력하는 태그 – audio
 * 주간 히트송 예제
 
-[ppt doc](/attach/ppt/Practice_HTML_base_2.pptx)
+[ppt doc](/attach/ppt/2016-12-11-html-tag-css-ppt/Practice_HTML_base_2.pptx)
 ---
 
 ### 이번 강의는 HTML  기본-III편입니다.
@@ -36,7 +36,7 @@ author: Jaehyek
 * 폼 태그
 * 레이아웃 구성 태그 – div, span
 
-[ppt doc](/attach/ppt/Practice_HTML_base_3.pptx)
+[ppt doc](/attach/ppt/2016-12-11-html-tag-css-ppt/Practice_HTML_base_3.pptx)
 ---
 
 ### 이번 강의는 HTML기본-IV 편입니다.
@@ -44,7 +44,7 @@ author: Jaehyek
 >* div를 이용한 레이아웃
 * 시멘틱을 이용한 레이아웃
 
-[ppt doc](/attach/ppt/Practice_HTML_base_4.pptx)
+[ppt doc](/attach/ppt/2016-12-11-html-tag-css-ppt/Practice_HTML_base_4.pptx)
 ---
 
 ### CSS  기본 I
@@ -53,7 +53,7 @@ author: Jaehyek
 * * 선택자
 * 전체와 특정태그의 혼합
 
-[ppt doc](/attach/ppt/Practice_CSS_base_1.pptx)
+[ppt doc](/attach/ppt/2016-12-11-html-tag-css-ppt/Practice_CSS_base_1.pptx)
 ---
 
 ### CSS  기본 – 2편입니다.
@@ -62,7 +62,7 @@ author: Jaehyek
 * 후손 및 자손 선택자
 * 동위 선택자
 
-[ppt doc](/attach/ppt/Practice_CSS_base_2.pptx)
+[ppt doc](/attach/ppt/2016-12-11-html-tag-css-ppt/Practice_CSS_base_2.pptx)
 ---
 
 ### 이번 강의는 CSS  기본-III편입니다.
@@ -72,7 +72,7 @@ author: Jaehyek
 * 구조 선택자
 * 전체적인 레이아웃 설정
 
-[ppt doc](/attach/ppt/Practice_CSS_base_3.pptx)
+[ppt doc](/attach/ppt/2016-12-11-html-tag-css-ppt/Practice_CSS_base_3.pptx)
 ---
 
 
@@ -82,7 +82,7 @@ author: Jaehyek
 * 링크 선택자
 * 부정 선택자
 
-[ppt doc](/attach/ppt/Practice_CSS_base_4.pptx)
+[ppt doc](/attach/ppt/2016-12-11-html-tag-css-ppt/Practice_CSS_base_4.pptx)
 ---
 
 ### 강의 내용 속성 1편
@@ -92,7 +92,7 @@ author: Jaehyek
 * visibility 속성
 * opacity 속성
 
-[ppt doc](/attach/ppt/Practice_CSS_attr_1.pptx)
+[ppt doc](/attach/ppt/2016-12-11-html-tag-css-ppt/Practice_CSS_attr_1.pptx)
 ---
 
 
@@ -102,7 +102,7 @@ author: Jaehyek
 * border 속성
 * background-image 속성
 
-[ppt doc](/attach/ppt/Practice_CSS_attr_2.pptx)
+[ppt doc](/attach/ppt/2016-12-11-html-tag-css-ppt/Practice_CSS_attr_2.pptx)
 ---
 ### 강의 내용 속성 3편
 >* font-family , font-size 속성
@@ -110,14 +110,14 @@ author: Jaehyek
 * text-align, text-decoration 속성
 * position 속성
 
-[ppt doc](/attach/ppt/Practice_CSS_attr_3.pptx)
+[ppt doc](/attach/ppt/2016-12-11-html-tag-css-ppt/Practice_CSS_attr_3.pptx)
 ---
 
 ### 강의 내용 속성 4편
 >* float 속성
 * gradient 속성
 
-[ppt doc](/attach/ppt/Practice_CSS_attr_4.pptx)
+[ppt doc](/attach/ppt/2016-12-11-html-tag-css-ppt/Practice_CSS_attr_4.pptx)
 ---
 
 
