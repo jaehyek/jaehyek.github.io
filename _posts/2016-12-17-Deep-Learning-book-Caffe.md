@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "BOOK-가장 빨리 만나는 딥러닝 with Caffe"
+title:  "BOOK-가장 빨리 만나는 Deep Learning with Caffe"
 categories: Deep-Learning
 comments: true
 tags:  Deep-Learning book Caffe
@@ -8,12 +8,12 @@ author: Jaehyek
 ---
 
 
-# 2.2 음성 인식 분야의 성과
+# 2.2 음성 인식(voice recognition) 분야의 성과
 - Baidu Deep Speech은 Bi-directional Recurrent Neural Network
 
 ![001](/img/2016-12-17-Deep-Learning-book-Caffe/001.JPG)
 
-# 2.3 이미지 인식 분야의 성과
+# 2.3 이미지 인식(image recognition) 분야의 성과
 - 이미지넷은 이미지 인식 콘테스트 ILSVRC 을 매년 실시
 - 이미지 set을 공개 <http://image-net.org>
 
@@ -82,29 +82,29 @@ total nodes | 9118 | 831304
 ![005](/img/2016-12-17-Deep-Learning-book-Caffe/005.JPG)
 ![006](/img/2016-12-17-Deep-Learning-book-Caffe/006.JPG)
 
-# 4 딥러닝 알고리즘 학습 방법
+# 4 딥러닝 알고리즘 학습 방법 ( Deep Learning Algorithm Mathod )
 
-### 입력층 활성화 함수
+### 입력층 활성화 함수 ( Input layer activation function )
 
 ![007](/img/2016-12-17-Deep-Learning-book-Caffe/007.JPG)
 ![008](/img/2016-12-17-Deep-Learning-book-Caffe/008.JPG)
 ![009](/img/2016-12-17-Deep-Learning-book-Caffe/009.JPG)
 
-### 출력층 활성화 함수
+### 출력층 활성화 함수 ( Output layer activation function )
 
 - softmax을 자주 사용합니다. 
 
-### 계층의 종류
+### 계층의 종류 ( Layer class )
 
 - 전결합층
 
 ![010](/img/2016-12-17-Deep-Learning-book-Caffe/010.JPG)
 
-- 컨볼루션층 : 이미지에서 특징을 추출
+- 컨볼루션층 (convolution layer): 이미지에서 특징을 추출
 
 ![011](/img/2016-12-17-Deep-Learning-book-Caffe/011.JPG)
 
-- 풀링층 : 국소적인 노드의 최대값을 취합 : 범위내 작은 변화는 같은 결과 값으로 표현.
+- 풀링층(pooling layer) : 국소적인 노드의 최대값을 취합 : 범위내 작은 변화는 같은 결과 값으로 표현.
 
 ![012](/img/2016-12-17-Deep-Learning-book-Caffe/012.JPG)
 
@@ -125,7 +125,7 @@ total nodes | 9118 | 831304
 - AdaDelta
 - Adam
 
-### 오토인코더의 학습 방법
+### 오토인코더( Autoencoder )의 학습 방법
 
 - 입력층과 출력증의 값이 같은 Neural Network
 
