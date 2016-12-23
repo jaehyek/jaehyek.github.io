@@ -1,9 +1,9 @@
 ---
 layout: post
 title:  "Deep Learning Useful Sites"
-categories: DeepLearning
+categories: Deep Learning
 comments: true
-tags:  DeepLearning MachineLearning
+tags:  Deep-Learning Machine-Learning
 author: Jaehyek
 ---
 
