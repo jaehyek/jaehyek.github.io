@@ -27,9 +27,15 @@ author: Jaehyek
 
 # Cause
 - Normal Case 
- - First, Packed-written Data is gone to SRAM, not to NAND 
- - If same address data come in, updating will done with existing same address data
+  - First, Packed Data is written to SRAM, not to NAND  
+  - If same address data comes in, merging will be done with existing same address data at SRAM
+  - and then, written to NAND 
 ![003](/img/2016-12-22-eMMC-UFS-Issues-05/003.JPG)
 
+- Crash Case 
+  - First, Packed Data is written to SRAM, not to NAND  
+  - The addresses of 5th and 7th data is same, and then,  the two data is merged at SRAM
+  - and then  while written to NAND, SPO(sudden power off ) occured
+  - the 6th data was not written to NAND 
 ![004](/img/2016-12-22-eMMC-UFS-Issues-05/004.JPG)
 
