@@ -41,3 +41,35 @@ PBN : Physical Block Number
 
 ### Hybrid Mapping
 ![004](/img/2016-12-07-eMMC-UFS-FTL-1/004.JPG)
+
+### Merge
+![005](/img/2016-12-07-eMMC-UFS-FTL-1/005.JPG)
+
+### Garbage Collection
+![006](/img/2016-12-07-eMMC-UFS-FTL-1/006.JPG)
+
+### Spare Space method
+- Mitsubishi
+ - Data space : in-place
+ - Spare space : out-of-place
+![007](/img/2016-12-07-eMMC-UFS-FTL-1/007.JPG)
+
+### Mirror Block  method
+- M-Systems (FMAX)
+![008](/img/2016-12-07-eMMC-UFS-FTL-1/008.JPG)
+
+### Log Block method
+- SNU
+![009](/img/2016-12-07-eMMC-UFS-FTL-1/009.JPG)
+- write (5,1) (5,1) (5,2) (5,4) (5,4) (5,1)
+- write (6,3) (8,0) (8,1) (8,2) (8,3) (8,4) (8,5)
+
+
+### Full Associative Sector Translation : FAST
+![010](/img/2016-12-07-eMMC-UFS-FTL-1/010.JPG)
+- write (5,1) (5, 1) (6. 2) (6, 4) (8, 4) (5, 1), (8, 3)
+
+
+
+
+
