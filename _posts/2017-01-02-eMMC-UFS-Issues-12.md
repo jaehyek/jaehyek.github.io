@@ -62,6 +62,6 @@ index 73c17db..f90e297 100644
 ![002](/img/2017-01-02-eMMC-UFS-Issues-12/002.JPG)
 
 # Failure Mode estimation of this issue
-[AUTO_EN Update usage @ A Customer system] (Chipset : MSM8953 / Kernel version : 3.18.24)
+[AUTO_EN Update usage @ A Customer system] (Chipset : MSM8953 / Kernel version : 3.18.24) <br/>
 In worst case, this issue makes the emmc life to be 1 year
 ![003](/img/2017-01-02-eMMC-UFS-Issues-12/003.JPG)
