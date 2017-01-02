@@ -27,6 +27,7 @@ author: Jaehyek
     W_req_2 : 70KB =16KB x 5
   - W_req_1 : allocate 4 pages while skipping one page
   - W_req_2 : allocate 6 pages while skipping one page
+  
 ![002](/img/2016-12-07-eMMC-UFS-FTL-5/002.JPG)
   
 ### Log-buf Algorithm

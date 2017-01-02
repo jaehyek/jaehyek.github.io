@@ -26,6 +26,7 @@ author: Jaehyek
 ![001](/img/2017-01-02-eMMC-UFS-Issues-12/001.JPG)
 
 at  drivers/mmc/core/mmc.c
+
 ~~~
 diff --git a/drivers/mmc/core/mmc.c b/drivers/mmc/core/mmc.c
 index 73c17db..f90e297 100644
