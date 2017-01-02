@@ -151,16 +151,17 @@ icon: heart
 - Logic Analyzer( HP ) 
 - IDA pro, Windbg, SoftICE
 
-### Authentication
-- Six Sigma Master Black Belt
-- ISTQB 
+### Certificate
+- Six Sigma Master Black Belt, NVidia Deep Learning Institude, ISTQB
+
+<img src="/img/about/sixsigma_certificate.jpg" width="350"  /> <img src="/img/about/DLI.jpg" width="350"  />
 
 ### Area of interest
 - Machine Learning & Deep Learning
 - SVM ( support vector machine )
 - Open platform : caffe, tensorflow
 - OpenCV ( Computer Vision )
- - Object Segmentation and Detection, Object Classification using SVM
+  - Object Segmentation and Detection, Object Classification using SVM
 
 
 >## contact me
@@ -175,9 +176,9 @@ icon: heart
 
 **If you would like to use this jekyll blog topic, please visit：[https://github.com/jaehyek/jaehyek.github.io](https://github.com/jaehyek/jaehyek.github.io)**
 
-~ Welcome ~
+**Welcome**
 
-Welcome to the subject of some suggestions on this site, you can leave a message directly below or create a new [Issue](https://github.com/Gaohaoyang/gaohaoyang.github.io/issues)。
+Welcome to the subject of some suggestions on this site, you can leave a message directly below or create a new [Issue](https://github.com/jaehyek/jaehyek.github.io/issues)。
 
 ## Comments
 
