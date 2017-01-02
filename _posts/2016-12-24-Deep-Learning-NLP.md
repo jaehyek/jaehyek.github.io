@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "BOOK-가장 빨리 만나는 Deep Learning with Caffe"
+title:  "Open-source NLP"
 categories: Deep-Learning
 comments: true
 tags:  Deep-Learning book Caffe
