@@ -86,4 +86,36 @@ Total number of pages for map | 512 ea | 8192KB/16KB
 ### Map-table structure
 - Map_dir
 - Map_page
+ 1)Write request for 4096 LB arrives
+ 2)Lookup map_dir & get ppa 2 for map_page
+ 3)Lookup map_page & get ppa 12144 for data
+
+![006](/img/2016-12-07-eMMC-UFS-FTL-5/006.JPG)
+
+### NAND Area Partition
+
+![007](/img/2016-12-07-eMMC-UFS-FTL-5/007.JPG)
+
+### Map cache
+
+![007](/img/2016-12-07-eMMC-UFS-FTL-5/007.JPG)
+- SRAM of eMMC is too small for all map
+  - SRAM is around 256K and consumed for (code, data buffer, map)
+  - SRAM for map is under 128K
+- Map-cache is SRAM area to keep small part of the entire map-table
+![008](/img/2016-12-07-eMMC-UFS-FTL-5/008.JPG)
+
+### Read Sequence
+
+![009](/img/2016-12-07-eMMC-UFS-FTL-5/009.JPG)
+
+### Worst cases : frequent map-update
+- Cache-line is 4K bytes which contains 1K ea mapping info
+ - covering 16M logical area (1K X 16K page)
+- Writes sequences
+ - Page 0, page 1K, page 2K, … , page
+- Update map-page into NAND per writing every pages
+ - Programming 2 NAND pages for each 1 page write request
+ 
+![010](/img/2016-12-07-eMMC-UFS-FTL-5/010.JPG)
 
