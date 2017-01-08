@@ -9,3 +9,4 @@ author: Jaehyek
 
 Open-source NLP toolkits like Stanford CoreNLP or OpenNLP 
 
+please refer to <https://github.com/datanada/Awesome-Korean-NLP>
