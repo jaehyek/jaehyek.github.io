@@ -13,7 +13,7 @@ author: Jaehyek
 - Hy
 
 # Failure Symptom
-- Assert 시Bit Flip samples FA status
+- When assert, Bit Flip samples FA status
 
 # Root Cause
 - System Block Consistency FAIL
