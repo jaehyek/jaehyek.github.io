@@ -14,6 +14,7 @@ author: Jaehyek
 
 SGDK330B was newly lined up to analyzer (June 2015)
 SGDK330B Main POD has 1GB memory on board, so it has following functions
+
 - SGDK330B can save all of protocol information of HS400 mode.
 - On the other hand, SGDK330A cannot save all of protocol information of HS400 mode.
 - SGDK330A can save only 256Byte (half of one sector) information of HS400 mode.
