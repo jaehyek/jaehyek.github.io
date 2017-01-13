@@ -20,6 +20,7 @@ author: Jaehyek
 
 # Cause procedure
 After reviewing the firmware structure, the following scenario of event sequence has been identified as suspected failure sequence <br/>  
+
 1. During power up init, firmware selects the block to use, for example the BLK-A never used before and sets the dirty bit='1' in SRAM
 2. Firmware enters suspend mode (auto standby) after few ms. Some SRAM including dirty bit of BLK-A will be turn off during suspend mode.
 3. Write command triggers the device awakes from suspend mode and firmware uses  the BLK-A without erase it. The dirty bit "i" and P/E of BLK-A will be updated into a system block when the write operation is completed
