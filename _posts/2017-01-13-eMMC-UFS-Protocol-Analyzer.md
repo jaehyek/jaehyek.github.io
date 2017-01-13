@@ -12,17 +12,17 @@ author: Jaehyek
 
 # [SGDK330B information]
 
-SGDK330B was newly lined up to analyzer (June 2015)
-SGDK330B Main POD has 1GB memory on board, so it has following functions
+SGDK330B was newly lined up to analyzer (June 2015) <br/>
+SGDK330B Main POD has 1GB memory on board, so it has following functions <br/>
 
 - SGDK330B can save all of protocol information of HS400 mode.
 - On the other hand, SGDK330A cannot save all of protocol information of HS400 mode.
 - SGDK330A can save only 256Byte (half of one sector) information of HS400 mode.
 - Maximum LOG size of SGDK330B is 1GB
 
-Architecture of SGDK330B is the same as SGDK330A.
-All of Mini POD can be used for both SGDK330A and SGDK330B.
-Differences between SGDK330A and SGDK330B are the items which are related to 1GB on board.
+Architecture of SGDK330B is the same as SGDK330A. <br/>
+All of Mini POD can be used for both SGDK330A and SGDK330B. <br/>
+Differences between SGDK330A and SGDK330B are the items which are related to 1GB on board. <br/>
 
 # Mechanism
 ![002](/img/2017-01-13-eMMC-UFS-Protocol-Analyzer/002.JPG)
