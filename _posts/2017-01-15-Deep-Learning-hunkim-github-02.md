@@ -38,6 +38,7 @@ author: Jaehyek
  - You can navigate to http://0.0.0.0:6006
 
 ![004](/img/2017-01-15-Deep-Learning-hunkim-github-02/004.JPG)
+
 ```
 import tensorflow as tf
 import numpy as np

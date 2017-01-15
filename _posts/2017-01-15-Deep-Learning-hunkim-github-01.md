@@ -36,6 +36,7 @@ author: Jaehyek
 ![009](/img/2017-01-15-Deep-Learning-hunkim-github-01/009.JPG)
 
 **sample code**
+
 ```
 h = tf.matmul(W, X)
 hypothesis = tf.div(1., 1. + tf.exp(-h))
