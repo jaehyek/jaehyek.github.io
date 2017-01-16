@@ -9,13 +9,14 @@ author: Jaehyek
 
 # Component Feature
 - 
-- Controller : 
+- Controller : PS8225 + 2xL94C + 2x V01M
 - Mi
 
 # Failure Symptom
-- Smart Phone hang-up
+- The boot system  stops after power-on
 
 # Root Cause
+- MLC Open Block 616 is with UECC
 - Vt distribution shows the UECC block has been double programmed in MLC mode.
 
 # Cause procedure
@@ -33,8 +34,10 @@ Note : FW management of dirty bit of never used NAND block ( P/W=1) <br/>
 
 
 # Conclusions:
-A firmwar issue is confirmed , the firmware issue will induce NAND block double programmed after power loss.
+This failure mode was caused when a sudden power-off occurs during writing some data to a never-used block.
 
-As this is productin failure observed after 300K units processed, Micron considers it as singular case where uncontrolled power cuts occur in line ( 11 times of power loss )
+A firmware issue is confirmed , the firmware issue will induce NAND block double programmed after power loss.
+
+As this is production failure observed after 300K units processed, Micron considers it as singular case where uncontrolled power cuts occur in line ( 11 times of power loss )
 
 At end user side, by assuming 3/5GB x day transferred in the early usage of the phone, it is expected that within few days all NAND blocks of the device will be written once and this issue will not be triggered after that.
