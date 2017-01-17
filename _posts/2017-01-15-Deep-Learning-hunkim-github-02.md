@@ -134,5 +134,28 @@ with tf.Session() as sess:
 - Not all 0’s
 - Challenging issue
 - Hinton et al. (2006) "A Fast Learning Algorithm for Deep Belief Nets”
- - Restricted Boatman Machine (RBM)
+ - Restricted Boatman Machine (RBM) :  not used these day
+ - recreate input ( encoder/decoder )
+ - Deep Belief Net ( initialized by RBM )
  
+#### Good news
+- No need to use complicated RBM for weight initializations
+- Simple methods are OK
+  - Xavier initialization
+  - He’s initialization
+- Makes sure the weights are ‘just right’, not too small, not too big
+- Using number of input (fan_in) and output (fan_out)
+
+```
+# Xavier initialization
+# Glorot et al.2010
+W = np.random.randn(fan_in, fan_out)/np.sqrt(fan_in)
+
+# He et al.2015
+W = np.random.randn(fan_in, fan_out)/np.sqrt(fan_in/2)
+```
+ 
+- prettytensor implementation
+
+```
+```
