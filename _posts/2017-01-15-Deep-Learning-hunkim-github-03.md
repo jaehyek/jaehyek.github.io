@@ -56,8 +56,11 @@ refer to <http://cs.stanford.edu/people/karpathy/convnetjs/demo/cifar10.html>
 # CNN Case Study
 
 #### Case Study: LeNet-5 [LeCun et al., 1998]
+
 #### Case Study: AlexNet [Krizhevsky et al. 2012]
+
 #### Case Study: GoogLeNet [Szegedy et al., 2014]
+
 #### Case Study: ResNet [He et al., 2015]
 
 - Slide from Kaiming He’s recent presentation https://www.youtube.com/watch?v=1PGLj-uKT1w
