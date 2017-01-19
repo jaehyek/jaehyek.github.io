@@ -18,6 +18,7 @@ author: Jaehyek
 
 #### How to work
 - Formal definition
+
 ![002](/img/2017-01-15-Deep-Learning-hunkim-github-01/002.JPG)
 ![003](/img/2017-01-15-Deep-Learning-hunkim-github-01/003.JPG)
 ![004](/img/2017-01-15-Deep-Learning-hunkim-github-01/004.JPG)
