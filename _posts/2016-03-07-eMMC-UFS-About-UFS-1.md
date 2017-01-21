@@ -12,9 +12,9 @@ UFS = SATA High Speed + SCSI Standardization + eMMC Low Power
 
 JEDEC defines UFS as the next generation mobile storage spec
 
-![001](/img/2016-12-07-eMMC-UFS-FTL-1/001.JPG)
-![002](/img/2016-12-07-eMMC-UFS-FTL-1/002.JPG)
-![003](/img/2016-12-07-eMMC-UFS-FTL-1/003.JPG)
+![001](/img/2016-03-07-eMMC-UFS-About-UFS-1/001.JPG)
+![002](/img/2016-03-07-eMMC-UFS-About-UFS-1/002.JPG)
+![003](/img/2016-03-07-eMMC-UFS-About-UFS-1/003.JPG)
 
 #### UFS Serial Interface
 
@@ -24,7 +24,7 @@ JEDEC defines UFS as the next generation mobile storage spec
   - Crosstalk creates interference between the parallel lines
 - Cost: The decreasing cost of integrated circuits
 
-![004](/img/2016-12-07-eMMC-UFS-FTL-1/004.JPG)
+![004](/img/2016-03-07-eMMC-UFS-About-UFS-1/004.JPG)
 
 #### UFS AsyncCommand & Command Queuing
 
@@ -33,14 +33,14 @@ JEDEC defines UFS as the next generation mobile storage spec
 - Support multiple CMD queuing Maximize parallel programming
 - Better throughput through better NAND utilization
 
-![005](/img/2016-12-07-eMMC-UFS-FTL-1/005.JPG)
+![005](/img/2016-03-07-eMMC-UFS-About-UFS-1/005.JPG)
 
 - Re-Ordering.
   - Command queue execution sequence can be changed by considering NAND interleaving
   - Numberof active NAND chips per time is improved
   - Suitable for UFS because UFS protocol is a multi-thread, asynchronous protocol
   
-#### UFS has bette features than eMMC
+#### UFS has better features than eMMC
 
 Items | eMMC | UFS
 ----|-----|----
@@ -54,3 +54,38 @@ Features | Legacy eMMCFunctions | Same with eMMC
 Command Set | Legacy eMMCCommands | SCSI Commands
 Partitions | Boot/RPMB/User Area | 8-LU(including Boot)/ RPMB
 
+#### UFS : Simple PCB routing and cost save
+
+![006](/img/2016-03-07-eMMC-UFS-About-UFS-1/006.JPG)
+![010](/img/2016-03-07-eMMC-UFS-About-UFS-1/010.JPG)
+![011](/img/2016-03-07-eMMC-UFS-About-UFS-1/011.JPG)
+![007](/img/2016-03-07-eMMC-UFS-About-UFS-1/007.JPG)
+
+#### Functional Comparison for HW Perspective
+
+Item | eMMC5.0 | UFS2.0
+---- | ----- | ----
+HostI/F Speed | DDR400Mhz | 3Ghzx2Lane(6Ghz)
+HostSignal Type | CMOS | LVDS
+I/Oswing Level | 1.8V | 240mV
+Comm.Type | HalfDuplex | FullDuplex
+I/OError Detection | CRC16/512Byte | CRC16/272Byte
+BufferControl | Busysignal | Uniprosupport, RTT
+Sector Size | 512 Byte | 4096 Byte (RPMB512Byte)
+RPMB | O | O
+#Lun | 4 | 8 
+Boot Partition | O | O
+Fast Boot |O | O
+Command Queue | X | O 
+Concurrent Ops. | X | O
+Secure Trim/Erase | O | O 
+Other eMMC features | O | O
+Command Protocol | eMMC | SCSI
+
+#### New feature list for each standard ver
+
+![008](/img/2016-03-07-eMMC-UFS-About-UFS-1/008.JPG)
+
+#### Memory I/F Trend on Mobile Application
+
+![008](/img/2016-03-07-eMMC-UFS-About-UFS-1/008.JPG)
