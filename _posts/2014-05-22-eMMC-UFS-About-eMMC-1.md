@@ -6,7 +6,7 @@ comments: true
 tags:  eMMC UFS About
 author: Jaehyek
 ---
-Here is the document about eMMC [ppt doc](/attach/ppt/2014-05-22-eMMC-UFS-About-eMMC-1/Introduction-to-eMMC.pdf)
+Here is the document about eMMC **[ppt doc](/attach/ppt/2014-05-22-eMMC-UFS-About-eMMC-1/Introduction-to-eMMC.pdf)**
 
 ## Multi Partition
 - eMMC 4.3  2 boot partitions and 1 user data partition
