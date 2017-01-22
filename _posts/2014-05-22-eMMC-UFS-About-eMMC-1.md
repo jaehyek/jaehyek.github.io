@@ -26,11 +26,11 @@ User Data Area ( Default Area) | MLC Mode | 93.1%
 
 ## RPMB(Replay Protect Memory Block)
 - Only handled by security key (SHA-256)
-- When host tries to access to RPMB
-  a) Host reads key the counter value to generate MAC (token) using SHA-256 algorithm
-  b) The host sends the generated MAC to eMMC controller
-  c) eMMC controller reads the key which was pre-loaded by host and the counter value to generate MAC using SHA-256
-  d) Compares two MAC. If two keys are identical, RPMB access is allowed
+- When host tries to access to RPMB <br/>
+  a) Host reads key the counter value to generate MAC (token) using SHA-256 algorithm <br/>
+  b) The host sends the generated MAC to eMMC controller <br/>
+  c) eMMC controller reads the key which was pre-loaded by host and the counter value to generate MAC using SHA-256 <br/>
+  d) Compares two MAC. If two keys are identical, RPMB access is allowed <br/>
   
 ![002](/img/2014-05-22-eMMC-UFS-About-eMMC-1/002.JPG)
 
