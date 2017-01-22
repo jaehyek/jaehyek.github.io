@@ -9,7 +9,8 @@ icon: heart
 {:toc}
 
 ## about me
-![Alt text](/img/jaehyek.jpg)
+
+<img src="/img/jaehyek.jpg" width="400"  />
 
 >## Experience Summary
 
