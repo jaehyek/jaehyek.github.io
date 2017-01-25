@@ -6,6 +6,14 @@ comments: true
 tags:  eMMC UFS About
 author: Jaehyek
 ---
+The following information was astracted from 
+
+[UFS_Overview_20150821_r0.pdf](/attach/ppt/2016-03-07-eMMC-UFS-About-UFS-1/UFS_Overview_20150821_r0.pdf)
+[M1CCL02-082_Toshiba_UFS_Memory_Overview_for_LGMC_20151022m(S).pdf](/attach/ppt/2016-03-07-eMMC-UFS-About-UFS-1/M1CCL02-082_Toshiba_UFS_Memory_Overview_for_LGMC_20151022m(S).pdf)
+[M1PCA00-010_TOSHIBA_UFS_Ver2.0_Application_Note_Rev0.1.pdf](/attach/ppt/2016-03-07-eMMC-UFS-About-UFS-1/M1PCA00-010_TOSHIBA_UFS_Ver2.0_Application_Note_Rev0.1.pdf)
+[151024_Samsung_Flash_Memory.pdf](/attach/ppt/2016-03-07-eMMC-UFS-About-UFS-1/151024_Samsung_Flash_Memory.pdf)
+
+
 
 # UFS (Universal Flash Storage)
 UFS = SATA High Speed + SCSI Standardization + eMMC Low Power
