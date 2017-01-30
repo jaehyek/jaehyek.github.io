@@ -7,7 +7,7 @@ tags:  Deep-Learning summary hunkim github
 author: Jaehyek
 ---
 
-## Titan X install on Ubuntu 16.04
+
 refer to the URL <http://www.nvidia.com/object/gpu-accelerated-applications-tensorflow-installation.html>
 
 #### Step 1. Install NVIDIA CUDA
