@@ -47,6 +47,7 @@ sess.run(tf.global_variables_initializer())
 ```python
 sess.run(tf.local_variables_initializer())
 ```
+
 ### write_version tf.train.SaverDef.V1 => tf.train.SaverDef.V2
 
 저장 포멧 변경으로 하위 호환이 사라짐. 하위 호환이 필요없다면 무시 가능
@@ -98,6 +99,7 @@ merged = tf.merge_all_summaries()
 ```python
 merged = tf.summary.merge_all()
 ```
+
 ### scalar_summary => summary.scalar
 
 단순히 이름만 변경됨. 비슷한 류의 summary 함수들 모두 동일하게 
@@ -222,6 +224,7 @@ output = tf.reshape(tf.concat_v2(outputs, 1), [-1, rnn_size])
 
 
 ---
+
 ## tensorflow.bloc 공식 발표에 나왔으나 아직 미정리 ㅠㅜ
 
 * tf.pack / tf.unpack –> tf.stack / tf.unstack
