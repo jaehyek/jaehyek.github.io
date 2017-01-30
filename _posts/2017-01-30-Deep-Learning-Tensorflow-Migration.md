@@ -15,11 +15,13 @@ author: Jaehyek
 2017-3-2 삭제 예정. 아직은 경고만 뜹니다만 미리 변경을 추천드립니다.
 
 **v0.x 일반적인 코드**
+
 ```python
 saver = tf.train.Saver(tf.all_variables())
 ```
 
 **v1.0.0rc0**
+
 ```python
 saver = tf.train.Saver(tf.global_variables())
 ```
@@ -28,11 +30,13 @@ saver = tf.train.Saver(tf.global_variables())
 ### all_variables => global_variables
 
 **v0.x 일반적인 코드**
+
 ```python
 sess.run(tf.initialize_all_variables())
 ```
 
 **v1.0.0rc0**
+
 ```python
 sess.run(tf.global_variables_initializer())
 ```
@@ -44,11 +48,13 @@ sess.run(tf.local_variables_initializer())
 저장 포멧 변경으로 하위 호환이 사라짐. 하위 호환이 필요없다면 무시 가능
 
 **v0.x 일반적인 코드**
+
 ```python
 tf.train.Saver(max_to_keep=200)
 ```
 
 **호환이 필요하다면 다음과 같이 해야함(미지정 시 기본 포멧이 V2로 저장됨)**
+
 ```python
 tf.train.Saver(max_to_keep=200, write_version=tf.train.SaverDef.V1) 
 ```
@@ -60,11 +66,13 @@ tf.train.Saver(max_to_keep=200, write_version=tf.train.SaverDef.V1)
 단순히 이름만 변경됨.
 
 **v0.x 일반적인 코드**
+
 ```python
 train_writer = tf.train.SummaryWriter('log/', sess.graph)
 ```
 
 **v1.0.0rc0**
+
 ```python
 train_writer = tf.summary.FileWriter('log/', sess.graph)
 ```
@@ -73,11 +81,13 @@ train_writer = tf.summary.FileWriter('log/', sess.graph)
 단순히 이름만 변경됨.
 
 **v0.x 일반적인 코드**
+
 ```python
 merged = tf.merge_all_summaries()
 ```
 
 **v1.0.0rc0**
+
 ```python
 merged = tf.summary.merge_all()
 ```
@@ -86,11 +96,13 @@ merged = tf.summary.merge_all()
 `*_summary => summary.*`
 
 **v0.x 일반적인 코드**
+
 ```python
 cost_summary = tf.scalar_summary('Cost', cost)
 ```
 
 **v1.0.0rc0**
+
 ```python
 cost_summary = tf.summary.scalar('Cost, cost)
 ```
@@ -99,11 +111,13 @@ cost_summary = tf.summary.scalar('Cost, cost)
 Argument가 암시적 지정 방식을 더이상 지원하지 않습니다. 명시적 지정이 필요합니다.
 
 **v0.x 일반적인 코드**
+
 ```python
 cost = tf.nn.softmax_cross_entropy_with_logits(pred, y)
 ```
 
 **v1.0.0rc0**
+
 ```python
 cost = tf.nn.softmax_cross_entropy_with_logits(logits=pred, labels=y)
 ```
@@ -113,11 +127,13 @@ cost = tf.nn.softmax_cross_entropy_with_logits(logits=pred, labels=y)
 패키지명 단순 이동.
 
 **v0.x 일반적인 코드**
+
 ```python
 encoDecoCell = tf.nn.rnn_cell.BasicLSTMCell(self.args.hiddenSize, state_is_tuple=True)
 ```
 
 **v1.0.0rc0**
+
 ```python
 encoDecoCell = tf.contrib.rnn.BasicLSTMCell(self.args.hiddenSize, state_is_tuple=True)
 ```
@@ -127,6 +143,7 @@ encoDecoCell = tf.contrib.rnn.BasicLSTMCell(self.args.hiddenSize, state_is_tuple
 더 이쁘게 업그레이드 하는 방법 아시는분 추천 부탁드립니다.
 
 **v0.x 일반적인 코드**
+
 ```python
 decoderOutputs, states = tf.nn.seq2seq.embedding_rnn_seq2seq(
      self.encoderInputs, 
@@ -141,6 +158,7 @@ decoderOutputs, states = tf.nn.seq2seq.embedding_rnn_seq2seq(
 ```
 
 **v1.0.0rc0**
+
 ```python
 decoderOutputs, states = tf.contrib.legacy_seq2seq.embedding_rnn_seq2seq(
      self.encoderInputs, 
@@ -159,11 +177,13 @@ decoderOutputs, states = tf.contrib.legacy_seq2seq.embedding_rnn_seq2seq(
 잘돌아가던 rnn이 업그레이드 후 이상동작을 보인다면 95.135%는 여기가 문제입니다.
 
 **v0.x 일반적인 코드**
+
 ```python
 inputs = tf.split(1, seq_length, tf.nn.embedding_lookup(embedding, input_data))
 ```
 
 **v1.0.0rc0**
+
 ```python
 # inputs = tf.split(1, seq_length, tf.nn.embedding_lookup(embedding, input_data))
 inputs = tf.split(tf.nn.embedding_lookup(embedding, input_data), seq_length, 1)
@@ -173,11 +193,13 @@ inputs = tf.split(tf.nn.embedding_lookup(embedding, input_data), seq_length, 1)
 다행히 v2 함수가 따로 준비되어서 당분간 기존 함수로도 수정 없이 무난히 동작합니다.
 
 **v0.x에 잘돌아가던 코드**
+
 ```python
 output = tf.reshape(tf.concat(1, outputs), [-1, rnn_size])
 ```
 
 **v1.0.0rc0**
+
 ```python
 output = tf.reshape(tf.concat_v2(outputs, 1), [-1, rnn_size])
 ```
