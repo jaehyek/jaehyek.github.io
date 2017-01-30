@@ -36,7 +36,6 @@ export GLPATH=/usr/lib
 
 #### TensorFlow 1.0.0-RC0 Release
 
-'''
 > ##### 파이썬 2.7
 > # Ubuntu/Linux 64-bit, CPU only, Python 2.7
 > $ export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.0.0rc0-cp27-none-linux_x86_64.whl
@@ -88,7 +87,7 @@ export GLPATH=/usr/lib
 > 
 > #### 설치
 > $ sudo pip install --upgrade $TF_BINARY_URL
-'''
+
 
 - 윈도우즈 CPU:
 
