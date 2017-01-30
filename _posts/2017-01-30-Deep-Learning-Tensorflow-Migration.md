@@ -11,7 +11,9 @@ author: Jaehyek
 1.0.0rc0 정식 출시에따라 겪게되는 맨붕 사태를 정리해 봤습니다.
 
 ## Common
+
 ### 초기화 : initialize_all_variables => global_variables_initializer or local_variables_initializer
+
 2017-3-2 삭제 예정. 아직은 경고만 뜹니다만 미리 변경을 추천드립니다.
 
 **v0.x 일반적인 코드**
@@ -27,6 +29,7 @@ saver = tf.train.Saver(tf.global_variables())
 ```
 
 ## Saver
+
 ### all_variables => global_variables
 
 **v0.x 일반적인 코드**
@@ -45,6 +48,7 @@ sess.run(tf.global_variables_initializer())
 sess.run(tf.local_variables_initializer())
 ```
 ### write_version tf.train.SaverDef.V1 => tf.train.SaverDef.V2
+
 저장 포멧 변경으로 하위 호환이 사라짐. 하위 호환이 필요없다면 무시 가능
 
 **v0.x 일반적인 코드**
@@ -60,9 +64,11 @@ tf.train.Saver(max_to_keep=200, write_version=tf.train.SaverDef.V1)
 ```
 
 ## Summary
+
 전체적으로 summery 관련 함수들이 tf에서 tf.summery로 이동되고 Summery prefix가 삭제되는 형태의 단순 이름 변경.
 
 ### SummaryWriter => FileWriter
+
 단순히 이름만 변경됨.
 
 **v0.x 일반적인 코드**
@@ -78,6 +84,7 @@ train_writer = tf.summary.FileWriter('log/', sess.graph)
 ```
 
 ### merge_all_summaries => summary.merge_all
+
 단순히 이름만 변경됨.
 
 **v0.x 일반적인 코드**
@@ -92,6 +99,7 @@ merged = tf.merge_all_summaries()
 merged = tf.summary.merge_all()
 ```
 ### scalar_summary => summary.scalar
+
 단순히 이름만 변경됨. 비슷한 류의 summary 함수들 모두 동일하게 
 `*_summary => summary.*`
 
@@ -106,8 +114,11 @@ cost_summary = tf.scalar_summary('Cost', cost)
 ```python
 cost_summary = tf.summary.scalar('Cost, cost)
 ```
+
 ## Optimizer
+
 ### softmax_cross_entropy_with_logits
+
 Argument가 암시적 지정 방식을 더이상 지원하지 않습니다. 명시적 지정이 필요합니다.
 
 **v0.x 일반적인 코드**
@@ -123,7 +134,9 @@ cost = tf.nn.softmax_cross_entropy_with_logits(logits=pred, labels=y)
 ```
 
 ## RNN과 RNN에서 많이 쓰는 함수
+
 ### tf.nn.rnn_cell.*  => tf.contrib.rnn.*
+
 패키지명 단순 이동.
 
 **v0.x 일반적인 코드**
@@ -139,6 +152,7 @@ encoDecoCell = tf.contrib.rnn.BasicLSTMCell(self.args.hiddenSize, state_is_tuple
 ```
 
 ### tf.nn.seq2seq.* => tf.contrib.legacy_seq2seq.*
+
 패키지명 단순 이동. legacy가 붙은걸 봐선 권장하는 방식이 아닐진데... 
 더 이쁘게 업그레이드 하는 방법 아시는분 추천 부탁드립니다.
 
@@ -174,6 +188,7 @@ decoderOutputs, states = tf.contrib.legacy_seq2seq.embedding_rnn_seq2seq(
 ```
 
 ### tf.split(split_dim, num_splits, value) –> tf.split(value, num_or_size_splits, axis)  !!!! 순서 바뀜 !!!!
+
 잘돌아가던 rnn이 업그레이드 후 이상동작을 보인다면 95.135%는 여기가 문제입니다.
 
 **v0.x 일반적인 코드**
@@ -190,6 +205,7 @@ inputs = tf.split(tf.nn.embedding_lookup(embedding, input_data), seq_length, 1)
 ```
 
 ### tf.concat(concat_dim, values) –> tf.concat_v2(values, axis) 
+
 다행히 v2 함수가 따로 준비되어서 당분간 기존 함수로도 수정 없이 무난히 동작합니다.
 
 **v0.x에 잘돌아가던 코드**
