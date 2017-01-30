@@ -36,56 +36,56 @@ export GLPATH=/usr/lib
 
 #### TensorFlow 1.0.0-RC0 Release
 
-> ##### 파이썬 2.7
-> # Ubuntu/Linux 64-bit, CPU only, Python 2.7 <br/>
+> ## 파이썬 2.7
+> ##### Ubuntu/Linux 64-bit, CPU only, Python 2.7 <br/>
 > $ export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.0.0rc0-cp27-none-linux_x86_64.whl
 
-> # Ubuntu/Linux 64-bit, GPU enabled, Python 2.7 <br/>
-> # Requires CUDA toolkit 8.0 and CuDNN v5. <br/>
+> ##### Ubuntu/Linux 64-bit, GPU enabled, Python 2.7 <br/>
+> ##### Requires CUDA toolkit 8.0 and CuDNN v5. <br/>
 > $ export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-1.0.0rc0-cp27-none-linux_x86_64.whl
 
-> # Mac OS X, CPU only, Python 2.7: <br/>
+> ##### Mac OS X, CPU only, Python 2.7: <br/>
 > $ export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-1.0.0rc0-py2-none-any.whl
 
-> # Mac OS X, GPU enabled, Python 2.7: <br/>
+> ##### Mac OS X, GPU enabled, Python 2.7: <br/>
 > $ export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/mac/gpu/tensorflow_gpu-1.0.0rc0-py2-none-any.whl
 
-> ##### 파이썬 3.x 
-> # Ubuntu/Linux 64-bit, CPU only, Python 3.3 <br/>
+> ## 파이썬 3.x 
+> ##### Ubuntu/Linux 64-bit, CPU only, Python 3.3 <br/>
 > $ export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.0.0rc0-cp33-cp33m-linux_x86_64.whl
 
-> # Ubuntu/Linux 64-bit, GPU enabled, Python 3.3 <br/>
-> # Requires CUDA toolkit 8.0 and CuDNN v5. <br/>
+> ##### Ubuntu/Linux 64-bit, GPU enabled, Python 3.3 <br/>
+> ##### Requires CUDA toolkit 8.0 and CuDNN v5. <br/>
 > $ export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-1.0.0rc0-cp33-cp33m-linux_x86_64.whl
 
-> # Ubuntu/Linux 64-bit, CPU only, Python 3.4 <br/>
+> ##### Ubuntu/Linux 64-bit, CPU only, Python 3.4 <br/>
 > $ export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.0.0rc0-cp34-cp34m-linux_x86_64.whl
 
-> # Ubuntu/Linux 64-bit, GPU enabled, Python 3.4 <br/>
-> # Requires CUDA toolkit 8.0 and CuDNN v5. <br/>
+> ##### Ubuntu/Linux 64-bit, GPU enabled, Python 3.4 <br/>
+> ##### Requires CUDA toolkit 8.0 and CuDNN v5. <br/>
 > $ export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-1.0.0rc0-cp34-cp34m-linux_x86_64.whl
 
-> # Ubuntu/Linux 64-bit, CPU only, Python 3.5 <br/>
+> ##### Ubuntu/Linux 64-bit, CPU only, Python 3.5 <br/>
 > $ export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.0.0rc0-cp35-cp35m-linux_x86_64.whl
 
-> # Ubuntu/Linux 64-bit, GPU enabled, Python 3.5 <br/>
-> # Requires CUDA toolkit 8.0 and CuDNN v5. <br/>
+> ##### Ubuntu/Linux 64-bit, GPU enabled, Python 3.5 <br/>
+> ##### Requires CUDA toolkit 8.0 and CuDNN v5. <br/>
 > $ export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-1.0.0rc0-cp35-cp35m-linux_x86_64.whl
 
-> # Ubuntu/Linux 64-bit, CPU only, Python 3.6 <br/>
+> ##### Ubuntu/Linux 64-bit, CPU only, Python 3.6 <br/>
 > $ export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.0.0rc0-cp36-cp36m-linux_x86_64.whl
 
-> # Ubuntu/Linux 64-bit, GPU enabled, Python 3.6 <br/>
-> # Requires CUDA toolkit 8.0 and CuDNN v5. <br/>
+> ##### Ubuntu/Linux 64-bit, GPU enabled, Python 3.6 <br/>
+> ##### Requires CUDA toolkit 8.0 and CuDNN v5. <br/>
 > $ export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-1.0.0rc0-cp36-cp36m-linux_x86_64.whl
 
-> # Mac OS X, CPU only, Python 3.4 or 3.5: <br/>
+> ##### Mac OS X, CPU only, Python 3.4 or 3.5: <br/>
 > $ export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-1.0.0rc0-py3-none-any.whl
 
-> # Mac OS X, GPU enabled, Python 3.4 or 3.5: <br/>
+> ##### Mac OS X, GPU enabled, Python 3.4 or 3.5: <br/>
 > $ export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/mac/gpu/tensorflow_gpu-1.0.0rc0-py3-none-any.whl
 
-> #### 설치 <br/>
+> ## 설치 <br/>
 > $ sudo pip install --upgrade $TF_BINARY_URL
 
 
