@@ -33,7 +33,7 @@ export GLPATH=/usr/lib
  
 #### Step 3. Install and upgrade PIP
 - sudo apt-get install python-pip python-dev
-- pip install --upgrade pip
+- sudo pip install --upgrade pip
 
 #### TensorFlow 1.0.0-RC0 Release
 아래의 글은 [여기](https://tensorflow.blog/2017/01/27/tensorflow-1-0-0-rc0-release/)에서 퍼 온 글이다.
