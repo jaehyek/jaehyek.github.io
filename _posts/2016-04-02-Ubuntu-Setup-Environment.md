@@ -9,48 +9,48 @@ author: Jaehyek
 
 ### .vimrc
 
-set tabstop=4
-set shiftwidth=4
-set cindent
-set autoindent
-set smartindent
-set expandtab
-set number
-set showmatch
-set ignorecase
-set smarttab
-set showcmd
-set hlsearch
-set incsearch
-set ruler
-filetype on
-set mouse=a
-syntax on
-set tags=./tags,./TAGS,tags,TAGS
+set tabstop=4 <br/>
+set shiftwidth=4 <br/>
+set cindent <br/>
+set autoindent <br/>
+set smartindent <br/>
+set expandtab <br/>
+set number <br/>
+set showmatch <br/>
+set ignorecase <br/>
+set smarttab <br/>
+set showcmd <br/>
+set hlsearch <br/>
+set incsearch <br/>
+set ruler <br/>
+filetype on <br/>
 
-filetype indent on
-set ff=unix
-colorscheme desert
+syntax on <br/>
+set tags=./tags,./TAGS,tags,TAGS <br/>
 
-autocmd vimenter * if !argc() | NERDTree | endif
-map <C-n> :NERDTreeToggle<CR>
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+filetype indent on <br/>
+set ff=unix <br/>
+colorscheme desert <br/>
+
+autocmd vimenter * if !argc() | NERDTree | endif <br/>
+map <C-n> :NERDTreeToggle<CR> <br/>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif <br/>
 
 
 ### .bashrc
 
-alias a='alias'
-alias vi='vim'
-alias dir='ls -al --color=auto'
-alias ls='ls -a --color=auto'
-alias h='history'
-alias sb='source .bashrc'
-alias vb='vi .bashrc'
-alias pstree='pstree -apcl'
-alias scrr='screen -li'
-HISTFILESIZE=5000
+alias a='alias' <br/>
+alias vi='vim' <br/>
+alias dir='ls -al --color=auto' <br/>
+alias ls='ls -a --color=auto' <br/>
+alias h='history' <br/>
+alias sb='source .bashrc' <br/>
+alias vb='vi .bashrc' <br/>
+alias pstree='pstree -apcl' <br/>
+alias scrr='screen -li' <br/>
+HISTFILESIZE=5000 <br/>
 
-### 한글 설정하기
+### 한글 설정하기 <br/>
 참조 할 site <http://ngee.tistory.com/326>
 
 효과를 보기 위해서는  language support 에서 한글 language을 선택하고 reboot한다. 
