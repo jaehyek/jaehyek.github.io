@@ -38,6 +38,7 @@ refer to the URL <http://www.nvidia.com/object/gpu-accelerated-applications-tens
 
 #### Step 4. Install Bazel
 To build TensorFlow from source, the Bazel build system must first be installed as follows  <br/>
+
 > $ sudo apt-get install software-properties-common swig  <br/>
 > $ sudo add-apt-repository ppa:webupd8team/java  <br/>
 > $ sudo apt-get update  <br/>
@@ -50,6 +51,7 @@ To build TensorFlow from source, the Bazel build system must first be installed 
 #### Step 5. Install TensorFlow
 To obtain the best performance with TensorFlow we recommend building it from source. <br/>
 First, clone the TensorFlow source code repository:  <br/>
+
 > $ git clone https://github.com/tensorflow/tensorflow <br/>
 > $ cd tensorflow  <br/>
 > $ git reset --hard 70de76e  <br/>
@@ -87,33 +89,37 @@ Then call bazel to build the TensorFlow pip package:
 And finally install the TensorFlow pip package
 
 Python 2.7: <br/>
+
 > $ sudo pip install --upgrade /tmp/tensorflow_pkg/tensorflow-0.9.0-*.whl 
 
 
 Python 3.4: <br/>
+
 > $ sudo pip install --upgrade /tmp/tensorflow_pkg/tensorflow-0.9.0-*.whl
 
 #### Step 6. UPGRADE PROTOBUF
 Upgrade to the latest version of the protobuf package:
 
 Python 2.7: <br/>
+
 > $ sudo pip install --upgrade https://storage.googleapis.com/tensorflow/linux/cpu/protobuf-3.0.0b2.post2-cp27-none-linux_x86_64.whl 
 
 Python 3.4: <br/>
+
 > sudo pip3 install --upgrade https://storage.googleapis.com/tensorflow/linux/cpu/protobuf-3.0.0b2.post2-cp34-none-linux_x86_64.whl
 
 #### Step 7. TEST YOUR INSTALLATION
 To test the installation, open an interactive Python shell and import the TensorFlow module:
 
-> $ cd 
-> $ python 
-> … 
-> >>> import tensorflow as tf 
-> I tensorflow/stream_executor/dso_loader.cc:105] successfully opened CUDA library libcublas.so locally 
-> I tensorflow/stream_executor/dso_loader.cc:105] successfully opened CUDA library libcudnn.so locally 
-> I tensorflow/stream_executor/dso_loader.cc:105] successfully opened CUDA library libcufft.so locally 
-> I tensorflow/stream_executor/dso_loader.cc:105] successfully opened CUDA library libcuda.so.1 locally 
-> I tensorflow/stream_executor/dso_loader.cc:105] successfully opened CUDA library libcurand.so locally
+> $ cd  <br/>
+> $ python  <br/>
+> …  <br/>
+> >>> import tensorflow as tf  <br/>
+> I tensorflow/stream_executor/dso_loader.cc:105] successfully opened CUDA library libcublas.so locally  <br/>
+> I tensorflow/stream_executor/dso_loader.cc:105] successfully opened CUDA library libcudnn.so locally  <br/>
+> I tensorflow/stream_executor/dso_loader.cc:105] successfully opened CUDA library libcufft.so locally  <br/>
+> I tensorflow/stream_executor/dso_loader.cc:105] successfully opened CUDA library libcuda.so.1 locally  <br/>
+> I tensorflow/stream_executor/dso_loader.cc:105] successfully opened CUDA library libcurand.so locally <br/>
 
 With the TensorFlow module imported, the next step to test the installation is to create a TensorFlow Session, which will initialize the available computing devices and provide a means of executing computation graphs:
 
