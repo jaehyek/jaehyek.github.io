@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Titan X install on Ubuntu 16.04"
+title:  "Titan X install on Ubuntu 14.04"
 categories: Deep-Learning
 comments: true
 tags:  Deep-Learning summary hunkim github
