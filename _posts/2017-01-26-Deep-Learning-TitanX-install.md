@@ -114,7 +114,7 @@ To test the installation, open an interactive Python shell and import the Tensor
 > $ cd  <br/>
 > $ python  <br/>
 > …  <br/>
-> ">>>"" import tensorflow as tf  <br/>
+> import tensorflow as tf  <br/>
 > I tensorflow/stream_executor/dso_loader.cc:105] successfully opened CUDA library libcublas.so locally  <br/>
 > I tensorflow/stream_executor/dso_loader.cc:105] successfully opened CUDA library libcudnn.so locally  <br/>
 > I tensorflow/stream_executor/dso_loader.cc:105] successfully opened CUDA library libcufft.so locally  <br/>
