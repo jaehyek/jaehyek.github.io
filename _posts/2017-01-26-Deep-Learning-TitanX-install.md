@@ -106,7 +106,7 @@ Python 2.7: <br/>
 
 Python 3.4: <br/>
 
-> sudo pip3 install --upgrade https://storage.googleapis.com/tensorflow/linux/cpu/protobuf-3.0.0b2.post2-cp34-none-linux_x86_64.whl
+> $ sudo pip3 install --upgrade https://storage.googleapis.com/tensorflow/linux/cpu/protobuf-3.0.0b2.post2-cp34-none-linux_x86_64.whl
 
 #### Step 7. TEST YOUR INSTALLATION
 To test the installation, open an interactive Python shell and import the TensorFlow module:
@@ -114,7 +114,7 @@ To test the installation, open an interactive Python shell and import the Tensor
 > $ cd  <br/>
 > $ python  <br/>
 > …  <br/>
-> >>> import tensorflow as tf  <br/>
+> ">>>"" import tensorflow as tf  <br/>
 > I tensorflow/stream_executor/dso_loader.cc:105] successfully opened CUDA library libcublas.so locally  <br/>
 > I tensorflow/stream_executor/dso_loader.cc:105] successfully opened CUDA library libcudnn.so locally  <br/>
 > I tensorflow/stream_executor/dso_loader.cc:105] successfully opened CUDA library libcufft.so locally  <br/>
@@ -123,11 +123,11 @@ To test the installation, open an interactive Python shell and import the Tensor
 
 With the TensorFlow module imported, the next step to test the installation is to create a TensorFlow Session, which will initialize the available computing devices and provide a means of executing computation graphs:
 
-> >>> sess = tf.Session()
+> sess = tf.Session()
 
 This command will print out some information on the detected hardware configuration. For example, the output on a system containing a Tesla M40 GPU is:
 
-> >>> sess = tf.Session()  <br/>
+>  sess = tf.Session()  <br/>
 > I tensorflow/core/common_runtime/gpu/gpu_init.cc:102] Found device 0 with properties:  <br/>
 > name: Tesla M40  <br/>
 > major: 5 minor: 2 memoryClockRate (GHz) 1.112  <br/>
@@ -142,10 +142,10 @@ To manually control which devices are visible to TensorFlow, set the CUDA_VISIBL
 
 You should now be able to run a Hello World application:
 
-> >>> hello_world = tf.constant("Hello, TensorFlow!")  <br/>
-> >>> print sess.run(hello_world)  <br/>
+> hello_world = tf.constant("Hello, TensorFlow!")  <br/>
+> print sess.run(hello_world)  <br/>
 > Hello, TensorFlow!  <br/>
-> >>> print sess.run(tf.constant(123)*tf.constant(456))  <br/>
+> print sess.run(tf.constant(123)*tf.constant(456))  <br/>
 > 56088 <br/>
  
 
