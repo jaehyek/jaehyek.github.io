@@ -38,13 +38,13 @@ refer to the URL <http://www.nvidia.com/object/gpu-accelerated-applications-tens
 #### Step 4. Install Bazel
 To build TensorFlow from source, the Bazel build system must first be installed as follows 
 > $ sudo apt-get install software-properties-common swig 
-> $ sudo add-apt-repository ppa:webupd8team/java 
-> $ sudo apt-get update 
-> $ sudo apt-get install oracle-java8-installer 
-> $ echo "deb http://storage.googleapis.com/bazel-apt stable jdk1.8" | sudo tee /etc/apt/sources.list.d/bazel.list 
-> $ curl https://storage.googleapis.com/bazel-apt/doc/apt-key.pub.gpg | sudo apt-key add - 
-> $ sudo apt-get update 
-> $ sudo apt-get install bazel
+$ sudo add-apt-repository ppa:webupd8team/java 
+$ sudo apt-get update 
+$ sudo apt-get install oracle-java8-installer 
+$ echo "deb http://storage.googleapis.com/bazel-apt stable jdk1.8" | sudo tee /etc/apt/sources.list.d/bazel.list 
+$ curl https://storage.googleapis.com/bazel-apt/doc/apt-key.pub.gpg | sudo apt-key add - 
+$ sudo apt-get update 
+$ sudo apt-get install bazel
 
 #### Step 5. Install TensorFlow
 To obtain the best performance with TensorFlow we recommend building it from source. <br/>
