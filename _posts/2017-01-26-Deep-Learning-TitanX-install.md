@@ -15,9 +15,10 @@ refer to the URL <http://www.nvidia.com/object/gpu-accelerated-applications-tens
 - download NVIDIA-Linux-x86_64-367.57.run from <http://www.nvidia.com/Download/driverResults.aspx/108586/en-us>
 - run the following instructions. refer to <http://askubuntu.com/questions/848221/installing-cuda-8-0-on-ubuntu-16-04-with-nvidia-geforce-845m>
 
-1. sudo apt-get --purge remove nvidia-*
+1. sudo apt-get purge  nvidia-*
 2. sudo service lightdm stop
 3. sudo ./NVIDIA-Linux-x86_64-367.57.run --no-opengl-files
+   다음 step 4에서 설치할 driver을 미리 설치한다. 즉 다음 step에서는 driver을 설치하지 않아야 한다.
 4. sudo ./cuda_8.0.44_linux.run **(you should not install its own nvidia-driver 367.48, as you have 367.57 already installed)**
 5. in /usr/local/cuda-8.0/include/host_config.h, comment this line out: #error -- unsupported GNU version! gcc versions later than 5 are not supported!
 6. insert the following in .bashrc 
