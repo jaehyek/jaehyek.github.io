@@ -10,6 +10,8 @@ author: Jaehyek
 
 refer to the URL <http://www.nvidia.com/object/gpu-accelerated-applications-tensorflow-installation.html>
 
+만일 위의 URL이 잘 되지 않는다면 다음 URL을 활용한다. <https://github.com/uher/InstallGpuEnableTensorflow>
+
 #### Step 1. Install NVIDIA CUDA
 > - download cuda_8.0.44_linux.run from <https://developer.nvidia.com/cuda-downloads>
 > - download NVIDIA-Linux-x86_64-367.57.run from <http://www.nvidia.com/Download/driverResults.aspx/108586/en-us>
@@ -31,10 +33,17 @@ refer to the URL <http://www.nvidia.com/object/gpu-accelerated-applications-tens
 #### Step 2. Install NVIDIA cuDNN
 > - download cudnn-8.0-linux-x64-v5.1.tgz from <https://developer.nvidia.com/rdp/cudnn-download> <br/>
 > $ sudo tar -xvf cudnn-8.0-linux-x64-v5.1.tgz -C /usr/local <br/>
+
+Additionally 
+
+> $ sudo apt-get install git <br/>
+> $ sudo apt-get install vim <br/>
+
  
 #### Step 3. Install and upgrade PIP
 > $ sudo apt-get install python-pip python-dev <br/>
-> $ sudo pip install --upgrade pip <br/>
+> $ pip install --upgrade pip <br/>
+> $ sudo pip install numpy <br/>
 
 #### Step 4. Install Bazel
 To build TensorFlow from source, the Bazel build system must first be installed as follows  <br/>
@@ -46,18 +55,68 @@ To build TensorFlow from source, the Bazel build system must first be installed 
 > $ echo "deb http://storage.googleapis.com/bazel-apt stable jdk1.8" | sudo tee /etc/apt/sources.list.d/bazel.list  <br/>
 > $ curl https://storage.googleapis.com/bazel-apt/doc/apt-key.pub.gpg | sudo apt-key add -  <br/>
 > $ sudo apt-get update  <br/>
+
+이후 다음을 하는 것 보다
 > $ sudo apt-get install bazel <br/>
+
+아래를 하는 것이 더 최신의 것 임.
+
+> $ wget https://github.com/bazelbuild/bazel/archive/0.3.2.tar.gz <br/>
+> $ tar -xvzf 0.3.2.tar.gz <br/>
+> $ cd bazel-0.3.2/ <br/>
+> $ sudo ./compile.sh <br/>
+> $ sudo cp output/bazel /usr/local/bin <br/>
+> $ cd .. <br/>
 
 #### Step 5. Install TensorFlow
 To obtain the best performance with TensorFlow we recommend building it from source. <br/>
 First, clone the TensorFlow source code repository:  <br/>
 
+
 > $ git clone https://github.com/tensorflow/tensorflow <br/>
 > $ cd tensorflow  <br/>
+
+다음을 하는 것 보다  <br/>
 > $ git reset --hard 70de76e  <br/>
+
+아래를 하는 것이 더 안정적인 것 임.
+
+> $ git reset --hard 287db3a  <br/> 
+
+그리고 configure을 하기 전에 다음을 실행한다.  <br/>
+1.computecpp을 설치한다. 다음을 참조하고 <https://www.codeplay.com/products/computesuite/computecpp> <br/>
+tar을 풀어서  /usr/local 밑에 둔다. <br/>
+
+2.zlib_archive의 new version을 설치한다. 다음과 같이 수정한다. <https://github.com/tensorflow/tensorflow/issues/6594>
+
+>    edit tensorflow/workspace.bzl <br/>
+>    replace zlib-1.2.8 with zlib-1.2.10 <br/>
+>    remove the sha256 line <br/>
+
+혹은 
+
+>  diff --git a/tensorflow/workspace.bzl b/tensorflow/workspace.bzl <br/>
+>  index 06e16cd..7c7b44c 100644 <br/>
+>  --- a/tensorflow/workspace.bzl <br/>
+>  +++ b/tensorflow/workspace.bzl <br/>
+>  @@ -228,9 +228,8 @@ def tf_workspace(path_prefix = "", tf_repo_name = ""): <br/>
+>    <br/>
+>     native.new_http_archive( <br/>
+>       name = "zlib_archive", <br/>
+>  -    url = "http://zlib.net/zlib-1.2.8.tar.gz", <br/>
+>  -    sha256 = "36658cb768a54c1d4dec43c3116c27ed893e88b02ecfcb44f2166f9c0b7f2a0d", <br/>
+>  -    strip_prefix = "zlib-1.2.8", <br/>
+>  +    url = "http://zlib.net/zlib-1.2.11.tar.gz", <br/>
+>  +    strip_prefix = "zlib-1.2.11", <br/>
+>       build_file = str(Label("//:zlib.BUILD")), <br/>
+>     ) <br/>
+
+configure script 실행에서  "Do you wish to build TensorFlow with GPU support?" 을 질문하지 않을 수 있으므로  <br/>
+export TF_NEED_CUDA = 1  하고  ( .bashrc 에 반영할 것. )  <br/>
 
 Then run the configure script as follows:
 
+> $ cd tensorflow <br/>
 > $ ./configure  <br/>
 > Please specify the location of python. [Default is /usr/bin/python]: [enter] <br/>
 > Do you wish to build TensorFlow with Google Cloud Platform support? [y/N] n  <br/>
@@ -81,32 +140,30 @@ Then run the configure script as follows:
 > Setting up CUPTI lib64  <br/>
 > Configuration finished <br/>
 
-Then call bazel to build the TensorFlow pip package:
+Then call bazel to build the TensorFlow pip package: <br/>
+만일 아래의 command가  안될 때는  <br/>
+bazel clean  <br/>
+을 실행하고 다시 실행할 것. <br/>
  
 > bazel build -c opt --config=cuda //tensorflow/tools/pip_package:build_pip_package  <br/>
 > bazel-bin/tensorflow/tools/pip_package/build_pip_package /tmp/tensorflow_pkg <br/>
 
 And finally install the TensorFlow pip package
 
-Python 2.7: <br/>
-
-> $ sudo pip install --upgrade /tmp/tensorflow_pkg/tensorflow-0.9.0-*.whl 
-
-
-Python 3.4: <br/>
-
-> $ sudo pip install --upgrade /tmp/tensorflow_pkg/tensorflow-0.9.0-*.whl
+> sudo pip install --upgrade /tmp/tensorflow_pkg/tensorflow-0.12* <br/>
 
 #### Step 6. UPGRADE PROTOBUF
 Upgrade to the latest version of the protobuf package:
 
-Python 2.7: <br/>
+Python 2.7: 
 
 > $ sudo pip install --upgrade https://storage.googleapis.com/tensorflow/linux/cpu/protobuf-3.0.0b2.post2-cp27-none-linux_x86_64.whl 
 
 Python 3.4: <br/>
 
 > $ sudo pip3 install --upgrade https://storage.googleapis.com/tensorflow/linux/cpu/protobuf-3.0.0b2.post2-cp34-none-linux_x86_64.whl
+
+> cd ..
 
 #### Step 7. TEST YOUR INSTALLATION
 To test the installation, open an interactive Python shell and import the TensorFlow module:

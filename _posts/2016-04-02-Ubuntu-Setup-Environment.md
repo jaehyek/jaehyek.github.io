@@ -50,6 +50,10 @@ alias pstree='pstree -apcl' <br/>
 alias scrr='screen -li' <br/>
 HISTFILESIZE=5000 <br/>
 
+### .bash_aliases
+
+alias python=python3
+
 ### 한글 설정하기 <br/>
 참조 할 site <http://ngee.tistory.com/326>
 
@@ -59,4 +63,5 @@ HISTFILESIZE=5000 <br/>
 ### ssh server setup
 
 $> sudo apt-get install openssh-server openssh-client
+$> sudo apt-get install mc
 
