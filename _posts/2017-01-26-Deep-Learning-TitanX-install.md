@@ -56,7 +56,7 @@ To build TensorFlow from source, the Bazel build system must first be installed 
 > $ curl https://storage.googleapis.com/bazel-apt/doc/apt-key.pub.gpg | sudo apt-key add -  <br/>
 > $ sudo apt-get update  <br/>
 
-이후 다음을 하는 것 보다
+이후 다음을 하는 것 보다 <br/>
 > $ sudo apt-get install bazel <br/>
 
 아래를 하는 것이 더 최신의 것 임.
@@ -90,7 +90,7 @@ tar을 풀어서  /usr/local 밑에 둔다. <br/>
 2.zlib_archive의 new version을 설치한다. 다음과 같이 수정한다. <https://github.com/tensorflow/tensorflow/issues/6594>
 
 >    edit tensorflow/workspace.bzl <br/>
->    replace zlib-1.2.8 with zlib-1.2.10 <br/>
+>    replace zlib-1.2.8 with zlib-1.2.11 <br/>
 >    remove the sha256 line <br/>
 
 혹은 
