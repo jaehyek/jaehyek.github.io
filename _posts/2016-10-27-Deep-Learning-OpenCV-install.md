@@ -17,31 +17,37 @@ $ sudo apt-get upgrade
 ```
 
 Now we need to install our developer tools:
+
 ```
 $ sudo apt-get install build-essential cmake git pkg-config
 ```
 
 OpenCV needs to be able to load various image file formats from disk, including JPEG, PNG, TIFF, etc. In order to load these image formats from disk, we’ll need our image I/O packages:
+
 ```
 $ sudo apt-get install libjpeg8-dev libtiff4-dev libjasper-dev libpng12-dev
 ```
 
 how do we display the actual image to our screen? The answer is the GTK development library, which the highgui  module of OpenCV depends on to guild Graphical User Interfaces (GUIs):
+
 ```
 $ sudo apt-get install libgtk2.0-dev
 ```
 
 what about processing video streams and accessing individual frames? We’ve got that covered here:
+
 ```
 $ sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
 ```
 
 Install libraries that are used to optimize various routines inside of OpenCV:
+
 ```
 $ sudo apt-get install libatlas-base-dev gfortran
 ```
 
 if a Python package manager is needed ? install pip : 
+
 ```
 $ wget https://bootstrap.pypa.io/get-pip.py 
 $ sudo python get-pip.py
@@ -58,6 +64,7 @@ $ git checkout 3.0.0
 > You can replace the 3.0.0  version with whatever the current release is. Be sure to check OpenCV.org for information on the latest release.
 
 We also need the opencv_contrib repo as well. Without this repository, we won’t have access to standard keypoint detectors and local invariant descriptors (such as SIFT, SURF, etc.) that were available in the OpenCV 2.4.X version. We’ll also be missing out on some of the newer OpenCV 3.0 features like text detection in natural images:
+
 ```
 $ cd ~ 
 $ git clone https://github.com/Itseez/opencv_contrib.git 
@@ -68,6 +75,7 @@ $ git checkout 3.0.0
 > make sure that you checkout the same version for opencv_contrib that you did for opencv above, otherwise you could run into compilation errors
 
 Time to setup the build:
+
 ```
 $ cd ~/opencv 
 $ mkdir build 
@@ -77,6 +85,7 @@ $ cmake -D CMAKE_BUILD_TYPE=RELEASE \ -D CMAKE_INSTALL_PREFIX=/usr/local \ -D IN
 ```
 
 Here some very important options, read carefully :
+
 ```
 CMAKE_BUILD_TYPE : This option indicates that we are building a release binary of OpenCV.
 CMAKE_INSTALL_PREFIX : The base directory where OpenCV will be installed.
@@ -94,30 +103,35 @@ OPENCV_EXTRA_MODULES_PATH : This option is extremely important — here we suppl
 > In order to build OpenCV 3.1.0, you need to set -D INSTALL_C_EXAMPLES=OFF (rather than ON) in the cmake command. There is a bug in the OpenCV v3.1.0 CMake build script that can cause errors if you leave this switch on. Once you set this switch to off, CMake should run without a problem.
 
 Now we can finally compile OpenCV:
+
 ```
 $ make -j4
 ```
 
 Where you can replace the 4 with the number of available cores on your processor to speedup the compilation.
 OpenCV Linking: If we have installed OpenCV globally on your PC and you want to link it to the virtualenv, we need to export the two following paths:
+
 ```
 ** export PYTHONPATH="${PYTHONPATH}:/my/other/path"** (Example of path: /opt/amd64/opencv-3.1.0/lib/python2.7/dist-packages)
 ** export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/my/other/path"** (Example of path: /opt/amd64/opencv-3.1.0/lib)
 ```
 
 Assuming that OpenCV compiled without error, you can now install it on your Ubuntu system:
+
 ```
 $ sudo make install 
 $ sudo ldconfig
 ```
 
 If you’ve reached this step without an error, OpenCV should now be installed in ** /usr/local/lib/python2.7/site-packages**. However, our cv virtual environment is located in our home directory — thus to use OpenCV within our cv environment, we first need to sym-link OpenCV into the site-packages directory of the cv virtual environment:
+
 ```
 $ cd ~/.virtualenvs/cv/lib/python2.7/site-packages/ 
 $ ln -s /usr/local/lib/python2.7/site-packages/cv2.so cv2.so
 ```
 
 Your output should be:
+
 ```
 >>> import cv2
 >>> cv2.__version__ '3.0.0'
@@ -131,6 +145,7 @@ $ wget https://s3-eu-west-1.amazonaws.com/christopherbourez/public/cudnn-6.5-lin
 ```
 
 Add to your .bashrc
+
 ```
 $ export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda-7.0/lib64:/home/users/N!OMUSUARI/cudnn-6.5-linux-x64-v2"
 $ export CUDA_HOME=/usr/local/cuda-7.0
