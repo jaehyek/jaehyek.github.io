@@ -99,7 +99,7 @@ OPENCV_EXTRA_MODULES_PATH : This option is extremely important — here we suppl
                 that we pulled down earlier, indicating that OpenCV should compile the extra modules as well.
 ```
 
-> The compiling options changes depending on the version of python and most depending on how we are installing all the libraries and the dependencies.
+> The compiling options changes depending on the version of python and most depending on how we are installing all the libraries and the dependencies.<br/>
 > In order to build OpenCV 3.1.0, you need to set -D INSTALL_C_EXAMPLES=OFF (rather than ON) in the cmake command. There is a bug in the OpenCV v3.1.0 CMake build script that can cause errors if you leave this switch on. Once you set this switch to off, CMake should run without a problem.
 
 Now we can finally compile OpenCV:
