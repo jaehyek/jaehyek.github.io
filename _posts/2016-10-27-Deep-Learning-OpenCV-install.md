@@ -160,9 +160,9 @@ Add to your .bashrc
 export GLPATH=/usr/lib
 export __GL_PERFMON_MODE=1
 export TF_NEED_CUDA=1
-export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64:/usr/local/lib:$LD_LIBRARY_PATH
-export PATH=/usr/local/cuda-8.0/bin:$PATH
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64:/usr/local/lib:$LD_LIBRARY_PATH
+export PATH=/usr/local/cuda/bin:$PATH
 export PYTHONPATH=/usr/local/lib/python2.7/dist-packages:$PYTHONPATH
-export CUDA_HOME=/usr/local/cuda-8.0
+export CUDA_HOME=/usr/local/cuda
 ```
 
