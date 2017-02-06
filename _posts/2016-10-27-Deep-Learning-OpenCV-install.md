@@ -44,6 +44,7 @@ Install libraries that are used to optimize various routines inside of OpenCV:
 
 ```
 $ sudo apt-get install libatlas-base-dev gfortran
+$ sudo apt-get install libhdf5-dev
 ```
 
 if a Python package manager is needed ? install pip : 
@@ -56,12 +57,13 @@ $ sudo python get-pip.py
 #### Install a OpenCV
 
 ```
-$ cd ~ $ git clone https://github.com/Itseez/opencv.git
+$ cd ~ 
+$ git clone https://github.com/daveselinger/opencv
 $ cd opencv 
-$ git checkout 3.0.0
+$ git checkout 3.1.0-with-cuda8
 ```
 
-> You can replace the 3.0.0  version with whatever the current release is. Be sure to check OpenCV.org for information on the latest release.
+> You can replace the 3.1.0  version with whatever the current release is. Be sure to check OpenCV.org for information on the latest release.
 
 We also need the opencv_contrib repo as well. Without this repository, we won’t have access to standard keypoint detectors and local invariant descriptors (such as SIFT, SURF, etc.) that were available in the OpenCV 2.4.X version. We’ll also be missing out on some of the newer OpenCV 3.0 features like text detection in natural images:
 
@@ -69,7 +71,7 @@ We also need the opencv_contrib repo as well. Without this repository, we won’
 $ cd ~ 
 $ git clone https://github.com/Itseez/opencv_contrib.git 
 $ cd opencv_contrib 
-$ git checkout 3.0.0
+$ git checkout 3.1.0
 ```
 
 > make sure that you checkout the same version for opencv_contrib that you did for opencv above, otherwise you could run into compilation errors
@@ -114,6 +116,8 @@ OpenCV Linking: If we have installed OpenCV globally on your PC and you want to 
 ```
 ** export PYTHONPATH="${PYTHONPATH}:/my/other/path"** (Example of path: /opt/amd64/opencv-3.1.0/lib/python2.7/dist-packages)
 ** export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/my/other/path"** (Example of path: /opt/amd64/opencv-3.1.0/lib)
+
+export PYTHONPATH="${PYTHONPATH}:/usr/local/lib/python2.7/dist-packages  :: .bashrc
 ```
 
 Assuming that OpenCV compiled without error, you can now install it on your Ubuntu system:
@@ -128,6 +132,12 @@ If you’ve reached this step without an error, OpenCV should now be installed i
 ```
 $ cd ~/.virtualenvs/cv/lib/python2.7/site-packages/ 
 $ ln -s /usr/local/lib/python2.7/site-packages/cv2.so cv2.so
+```
+
+Due to install error, we should copy cv2.so  
+
+```
+$ sudo cp ~/opencv/build/lib/cv2.so  /usr/local/lib/python2.7/dist-packages/
 ```
 
 Your output should be:
@@ -147,7 +157,12 @@ $ wget https://s3-eu-west-1.amazonaws.com/christopherbourez/public/cudnn-6.5-lin
 Add to your .bashrc
 
 ```
-$ export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda-7.0/lib64:/home/users/N!OMUSUARI/cudnn-6.5-linux-x64-v2"
-$ export CUDA_HOME=/usr/local/cuda-7.0
+export GLPATH=/usr/lib
+export __GL_PERFMON_MODE=1
+export TF_NEED_CUDA=1
+export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64:/usr/local/lib:$LD_LIBRARY_PATH
+export PATH=/usr/local/cuda-8.0/bin:$PATH
+export PYTHONPATH=/usr/local/lib/python2.7/dist-packages:$PYTHONPATH
+export CUDA_HOME=/usr/local/cuda-8.0
 ```
 
