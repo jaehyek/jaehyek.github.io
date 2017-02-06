@@ -153,6 +153,10 @@ And finally install the TensorFlow pip package
 > sudo pip install --upgrade /tmp/tensorflow_pkg/tensorflow-0.12* <br/>
 
 #### Step 6. UPGRADE PROTOBUF
+
+> 텐서플로우 pip 패키지는 protobuf pip 패키지 버전 3.0.0b2를 필요로 합니다. PyPI에서 다운받을 수 있는(pip install protobuf를 사용해서) Protobuf의 pip 패키지는 파이썬 만으로 개발된 라이브러리로 C++ 구현보다 직렬화/역직렬화시 10~50배 느립니다. Protobuf는 빠른 프로토콜 파싱을 위한 C++ 바이너리 확장을 지원합니다. 이 확장은 표준 파이썬 PIP 패키지에는 포함되어 있지 않습니다. 우리는 이 바이너리 확장을 포함한 protobuf pip 패키지를 자체적으로 만들었습니다. 다음 명령을 사용해 자체적으로 만든 protobuf pip 패키지를 설치할 수 있습니다:
+
+
 Upgrade to the latest version of the protobuf package:
 
 Python 2.7: 
@@ -164,6 +168,15 @@ Python 3.4: <br/>
 > $ sudo pip3 install --upgrade https://storage.googleapis.com/tensorflow/linux/cpu/protobuf-3.0.0b2.post2-cp34-none-linux_x86_64.whl
 
 > cd ..
+
+> pip install tensorflow 명령은 파이썬으로된 기본 pip 패키지를 설치하므로 위 패키지를 설치하려면 반드시 텐서플로우를 설치하고 난 후에 합니다. 위 pip 패키지는 이미 설치된 protobuf 패키지를 덮어 씁니다. 바이너리 pip 패키지는 64M 넘는 메세지에 대한 지원을 이미 하고 있어 아래와 같은 에러가 이미 해결 되었습니다:
+
+```
+[libprotobuf ERROR google/protobuf/src/google/protobuf/io/coded_stream.cc:207] A
+protocol message was rejected because it was too big (more than 67108864 bytes).
+To increase the limit (or to disable these warnings), see
+CodedInputStream::SetTotalBytesLimit() in google/protobuf/io/coded_stream.h.
+```
 
 #### Step 7. TEST YOUR INSTALLATION
 To test the installation, open an interactive Python shell and import the TensorFlow module:
