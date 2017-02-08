@@ -218,6 +218,26 @@ You should now be able to run a Hello World application:
 > print sess.run(tf.constant(123)*tf.constant(456))  <br/>
 > 56088 <br/>
  
+TensorFlow의 구현 코드(TensorFlow implementation)를 통해 graph에 정의된 내용이 실행가능한 작업들(operation)로 변환되고 CPU나 GPU같이 이용가능한 연산 자원들에 뿌려집니다. 코드로 어느 CPU 혹은 GPU를 사용할 지 명시적으로 지정할 필요는 없습니다. 작업을 가능한 한 많이 처리하기 위해 TensorFlow는 (컴퓨터가 GPU를 가지고 있다면) 첫 번째 GPU를 이용하니까요.
+
+만약 컴퓨터에 복수의 GPU가 있어서 이를 사용하려면, op을 어느 하드웨어에 할당할 지 명시적으로 밝혀야 합니다. 작업에 사용할 CPU 혹은 GPU를 지정하려면 with...Device 구문을 사용하면 됩니다.
+
+```
+with tf.Session() as sess:
+  with tf.device("/gpu:1"):
+    matrix1 = tf.constant([[3., 3.]])
+    matrix2 = tf.constant([[2.],[2.]])
+    product = tf.matmul(matrix1, matrix2)
+    ...
+```
+
+이용할 CPU 혹은 GPU는 문자열로 지정할 수 있습니다. 현재 지원되는 것은 아래와 같습니다.
+
+```
+- "/cpu:0": 컴퓨터의 CPU.
+- "/gpu:0": 컴퓨터의 1번째 GPU.
+- "/gpu:1": 컴퓨터의 2번쨰 GPU.
+```
 
 #### TensorFlow 1.0.0-RC0 Release
 아래의 글은 <https://tensorflow.blog/2017/01/27/tensorflow-1-0-0-rc0-release/>에서 퍼 온 글이다.
