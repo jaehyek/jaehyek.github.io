@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "OpenCV installation on Ubnut 14.04"
+title:  "install OpenCV on Ubnutu 14.04"
 categories: Deep-Learning
 comments: true
 tags:  Deep-Learning OpenCV 

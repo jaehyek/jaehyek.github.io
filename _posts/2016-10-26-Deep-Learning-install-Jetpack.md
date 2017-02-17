@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "NVidia TX1 Board Jetpack Installation"
+title:  "install Jetpack on NVidia TX1"
 categories: Deep-Learning
 comments: true
 tags:  Deep-Learning TX1 Jetpack 
