@@ -7,6 +7,8 @@ tags:  Deep-Learning  Machine-Learning overfitting
 author: Jaehyek
 ---
 
+refer to <http://laonple.blog.me/220522735677>
+
 #### What is the overfitting ?
 
 ![001](/img/2016-12-07-Deep-Learning-Avoid-overfitting/001.JPG)
