@@ -7,16 +7,37 @@ tags:  Deep-Learning SSD TX1
 author: Jaehyek
 ---
 
-refer to the URL <https://github.com/DrewNF/Build-Deep-Learning-Env-with-Tensorflow-Python-OpenCV>
+refer to the URL <https://myurasov.github.io/2016/11/27/ssd-tx1.html>
 
-#### After install the above link, and install the following 
+#### Before install the above link, and install the following 
 
 ```
 sudo apt-get install libatlas-base-dev 
 sudo apt-get install libgflags-dev libgoogle-glog-dev liblmdb-dev
 sudo apt-get install libopenblas-dev
 ```
+#### Modify the Makefile.config
 
+```
+OPENCV_VERSION := 3
+CUDA_ARCH := -gencode arch=compute_20,code=sm_20 \
+             -gencode arch=compute_20,code=sm_21 \
+             -gencode arch=compute_30,code=sm_30 \
+             -gencode arch=compute_35,code=sm_35 \
+             -gencode arch=compute_50,code=sm_50 \
+             -gencode arch=compute_52,code=sm_52 \
+             -gencode arch=compute_52,code=sm_53 \ ( 53 추가 )
+             -gencode arch=compute_61,code=sm_61
+
+PYTHON_LIB := /usr/lib/x86_64-linux-gnu ( intel CPU Desktop )
+PYTHON_LIB := /usr/lib/aarch64-linux-gnu ( Arm CPU Desktop )
+
+INCLUDE_DIRS := $(PYTHON_INCLUDE) /usr/local/include /usr/include/hdf5/serial/
+LIBRARY_DIRS := $(PYTHON_LIB) /usr/local/lib
+             
+```
+
+#### Modify the Makefile
 and add lib to Makefile  like this:
 in Makefile
 LIBRARIES += glog gflags protobuf boost_system boost_filesystem m hdf5_serial_hl hdf5_serial boost_regex
@@ -27,7 +48,7 @@ LIBRARIES += glog gflags protobuf boost_system boost_filesystem m hdf5_serial_hl
 sudo mount -t cifs //172.21.26.47/titanx-home/TX1/share  /home/ubuntu/opencv/build2 -o username=ysc,password=lge123
 ```
 
-#### install opencv2 
+#### install opencv2 ( Arm CPU Desktop )
 
 ```
 sudo apt-get install build-essential cmake git pkg-config
@@ -76,3 +97,33 @@ opencv_contrib/modules/tracking/src/onlineMIL.cpp :
 339: from a sign() call to a sgn() call
 ```
 
+#### if you got a error like as below during compiling caffe-ssd on intel CPU Desktop
+
+```
+/usr/include/boost/property_tree/detail/json_parser_read.hpp:257:264: error: ‘type name’ declared as function returning an array
+make: *** [.build_release/cuda/src/caffe/layers/detection_output_layer.o] Error 1
+```
+
+To solve the above ,  update the gcc, g++ compiler version to above 5. refer to <https://github.com/BVLC/caffe/issues/4957>
+
+```
+$ sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+$ sudo apt-get update
+$ sudo apt-get install gcc-5 g++-5
+```
+
+and then delete and create the gcc, g++ link 
+```
+$ sudo rm /usr/bin/gcc
+$ sudo rm /usr/bin/g++
+$ sudo cd /usr/bin
+$ sudo ln -s gcc-5 gcc
+$ sudo ln -s g++-5 g++
+```
+
+#### if ld can't find hdf5_serial_hl and hdf5_serial, use the old one in Makefile
+
+```
+LIBRARIES += glog gflags protobuf boost_system boost_filesystem boost_regex m hdf5_hl hdf5 boost_regex
+# LIBRARIES += glog gflags protobuf boost_system boost_filesystem m hdf5_serial_hl hdf5_serial boost_regex
+```
