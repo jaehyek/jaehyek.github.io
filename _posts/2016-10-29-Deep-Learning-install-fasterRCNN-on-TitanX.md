@@ -21,4 +21,8 @@ pip install pyyaml
 
 #### To run demo.
 
-First, download 
+First, download VGGnet_fast_rcnn_iter_70000.ckpt, and then 
+
+```
+~/FNRCC/tools $) python /demo.py --model ./VGGnet_fast_rcnn_iter_70000.ckpt
+```
