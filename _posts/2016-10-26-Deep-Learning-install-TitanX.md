@@ -14,7 +14,7 @@ refer to the URL <http://www.nvidia.com/object/gpu-accelerated-applications-tens
 
 #### Step 1. Install NVIDIA CUDA
 > - download cuda_8.0.44_linux.run from <https://developer.nvidia.com/cuda-downloads>
-> - download NVIDIA-Linux-x86_64-367.57.run from <http://www.nvidia.com/Download/driverResults.aspx/108586/en-us>
+> - download NVIDIA-Linux-x86_64-375.39.run from <http://www.nvidia.com/download/driverResults.aspx/114708/en-us>
 > - run the following instructions. refer to <http://askubuntu.com/questions/848221/installing-cuda-8-0-on-ubuntu-16-04-with-nvidia-geforce-845m>
 > 
 > 1. sudo apt-get purge  nvidia-*
