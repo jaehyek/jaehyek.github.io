@@ -20,8 +20,8 @@ author: Jaehyek
     <https://repo.continuum.io/miniconda/> 에서 Miniconda3-3.16.0-Linux-armv7l.sh 을 다운 받는다. <br/>
     <https://www.continuum.io/blog/developer/anaconda-raspberry-pi> 을 참조하면,  <br/>
     
-> $ wget http://repo.continuum.io/miniconda/Miniconda3-3.16.0-Linux-armv7l.sh
-> $ md5sum Miniconda3-3.16.0-Linux-armv7l.sh
+> $ wget http://repo.continuum.io/miniconda/Miniconda3-3.16.0-Linux-armv7l.sh <br/>
+> $ md5sum Miniconda3-3.16.0-Linux-armv7l.sh <br/>
 > $ /bin/bash Miniconda3-3.16.0-Linux-armv7l.sh
     
 3. path에 conda/bin을 추가한다. 
@@ -36,5 +36,5 @@ author: Jaehyek
 > #### For Python 3.4
 > $ sudo apt-get install python3-pip python3-dev
 > 
-> $ wget https://github.com/samjabrahams/tensorflow-on-raspberry-pi/releases/download/v1.0.1/tensorflow-1.0.1-cp34-cp34m-linux_armv7l.whl
-> $ pip3 install --user tensorflow-1.0.1-cp34-cp34m-linux_armv7l.whl
+> $ wget https://github.com/samjabrahams/tensorflow-on-raspberry-pi/releases/download/v1.0.1/tensorflow-1.0.1-cp34-cp34m-linux_armv7l.whl <br/>
+> $ pip3 install --user tensorflow-1.0.1-cp34-cp34m-linux_armv7l.whl <br/>
