@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Install Tensorflow and Opencv on Raspberry PI 3"
+title:  "Install Tensorflow and OpenCV on Raspberry PI 3"
 categories: Deep-Learning
 comments: true
-tags:  Deep-Learning Tensorflow Raspberry
+tags:  Deep-Learning Tensorflow OpenCV Raspberry
 author: Jaehyek
 ---
 
@@ -19,25 +19,27 @@ author: Jaehyek
 2. miniconda을 설치한다.  <br/>
     <https://repo.continuum.io/miniconda/> 에서 Miniconda3-3.16.0-Linux-armv7l.sh 을 다운 받는다. <br/>
     <https://www.continuum.io/blog/developer/anaconda-raspberry-pi> 을 참조하면,  <br/>
-    
-> $ wget http://repo.continuum.io/miniconda/Miniconda3-3.16.0-Linux-armv7l.sh <br/>
-> $ md5sum Miniconda3-3.16.0-Linux-armv7l.sh <br/>
-> $ /bin/bash Miniconda3-3.16.0-Linux-armv7l.sh
-    
+```    
+$ wget http://repo.continuum.io/miniconda/Miniconda3-3.16.0-Linux-armv7l.sh <br/>
+$ md5sum Miniconda3-3.16.0-Linux-armv7l.sh <br/>
+$ /bin/bash Miniconda3-3.16.0-Linux-armv7l.sh
+```    
 3. path에 conda/bin을 추가한다. 
-
-> export PATH="/home/jaehyek/miniconda3/bin:$PATH"
-   
+```
+export PATH="/home/jaehyek/miniconda3/bin:$PATH"
+```   
 4. Tensorflow 을 설치한다. <br/>
     <https://github.com/samjabrahams/tensorflow-on-raspberry-pi>을 참조하여 설치한다. 
-    
-> $ sudo apt-get update
-> 
-> ***For Python 3.4***
-> $ sudo apt-get install python3-pip python3-dev
-> 
-> $ wget https://github.com/samjabrahams/tensorflow-on-raspberry-pi/releases/download/v1.0.1/tensorflow-1.0.1-cp34-cp34m-linux_armv7l.whl <br/>
-> $ pip3 install --user tensorflow-1.0.1-cp34-cp34m-linux_armv7l.whl <br/>
+
+```
+$ sudo apt-get update
+
+***For Python 3.4***
+$ sudo apt-get install python3-pip python3-dev
+
+$ wget https://github.com/samjabrahams/tensorflow-on-raspberry-pi/releases/download/v1.0.1/tensorflow-1.0.1-cp34-cp34m-linux_armv7l.whl <br/>
+$ pip3 install --user tensorflow-1.0.1-cp34-cp34m-linux_armv7l.whl <br/>
+```
 
 5. OpenCV을 설치한다.  <br/>
    <http://www.emindlab.com/raspberry-pi/opencv-3-1-0-raspberry-pi.html> 여기를 참조한다.
