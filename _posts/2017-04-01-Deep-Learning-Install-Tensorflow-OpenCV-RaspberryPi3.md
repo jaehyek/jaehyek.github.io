@@ -24,12 +24,15 @@ $ wget http://repo.continuum.io/miniconda/Miniconda3-3.16.0-Linux-armv7l.sh <br/
 $ md5sum Miniconda3-3.16.0-Linux-armv7l.sh <br/>
 $ /bin/bash Miniconda3-3.16.0-Linux-armv7l.sh
 ```    
-3. path에 conda/bin을 추가한다. 
+
+3. path에 conda/bin을 추가한다.   <br/>
 ```
 export PATH="/home/jaehyek/miniconda3/bin:$PATH"
 ```   
+
 4. Tensorflow 을 설치한다. <br/>
-    <https://github.com/samjabrahams/tensorflow-on-raspberry-pi>을 참조하여 설치한다. <br/>
+    <https://github.com/samjabrahams/tensorflow-on-raspberry-pi>을 참조하여 설치한다.   <br/>
+
 ```
 $ sudo apt-get update
 
@@ -40,8 +43,10 @@ $ wget https://github.com/samjabrahams/tensorflow-on-raspberry-pi/releases/downl
 $ pip3 install --user tensorflow-1.0.1-cp34-cp34m-linux_armv7l.whl <br/>
 ```
 
+
 5. OpenCV을 설치한다.  <br/>
    <http://www.emindlab.com/raspberry-pi/opencv-3-1-0-raspberry-pi.html> 여기를 참조한다.<br/>
+
 ```
 sudo apt-get update
 sudo apt-get upgrade
@@ -84,7 +89,8 @@ https://docs.google.com/document/d/1OcVoQi8UJ2bCtJ2nFPkI-eZi9kuQoqthpOwpCpLGwJE/
 ```
 
 6. Camera을 enable한다. 그리고 확인해 본다  <br/>
-   <https://larrylisky.com/2016/11/24/enabling-raspberry-pi-camera-v2-under-ubuntu-mate/> 여기를 참조한다.<br/>
+   <https://larrylisky.com/2016/11/24/enabling-raspberry-pi-camera-v2-under-ubuntu-mate/> 여기를 참조한다.  <br/>  
+
 ```
 sudo apt-get update
 sudo apt-get upgrade
