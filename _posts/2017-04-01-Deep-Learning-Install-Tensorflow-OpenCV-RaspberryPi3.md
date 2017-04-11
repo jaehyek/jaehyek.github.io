@@ -29,8 +29,7 @@ $ /bin/bash Miniconda3-3.16.0-Linux-armv7l.sh
 export PATH="/home/jaehyek/miniconda3/bin:$PATH"
 ```   
 4. Tensorflow 을 설치한다. <br/>
-    <https://github.com/samjabrahams/tensorflow-on-raspberry-pi>을 참조하여 설치한다. 
-
+    <https://github.com/samjabrahams/tensorflow-on-raspberry-pi>을 참조하여 설치한다. <br/>
 ```
 $ sudo apt-get update
 
@@ -42,8 +41,7 @@ $ pip3 install --user tensorflow-1.0.1-cp34-cp34m-linux_armv7l.whl <br/>
 ```
 
 5. OpenCV을 설치한다.  <br/>
-   <http://www.emindlab.com/raspberry-pi/opencv-3-1-0-raspberry-pi.html> 여기를 참조한다.
-   
+   <http://www.emindlab.com/raspberry-pi/opencv-3-1-0-raspberry-pi.html> 여기를 참조한다.<br/>
 ```
 sudo apt-get update
 sudo apt-get upgrade
@@ -82,5 +80,65 @@ g++ -o facedetect facedetect.cpp `pkg-config opencv --cflags --libs`
 ./facedetect
 
 https://docs.google.com/document/d/1OcVoQi8UJ2bCtJ2nFPkI-eZi9kuQoqthpOwpCpLGwJE/edit?usp=sharing
+
+```
+
+6. Camera을 enable한다. 그리고 확인해 본다  <br/>
+   <https://larrylisky.com/2016/11/24/enabling-raspberry-pi-camera-v2-under-ubuntu-mate/> 여기를 참조한다.<br/>
+```
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install raspi-config rpi-update
+sudo raspi-config
+make sure /boot/config.txt
+     start_x=1
+     gpu_mem=128
+
+만일 다음과 같이 error가 난다면, 
+     mmal: mmal_component_create_core: could not find component 'vc.camera_info'
+     mmal: Failed to create camera_info component
+     mmal: mmal_component_create_core: could not find component 'vc.ril.camera'
+     mmal: Failed to create camera component
+     mmal: main: Failed to create camera component
+     mmal: Failed to run camera app. Please check for firmware updates
+old version을 다운한다.
+sudo rpi-update 667cfabe63bc663383559ef88317e86f9bd41e45
+
+그리고 다음을 수행한다.
+     git clone https://github.com/raspberrypi/userland.git
+     cd userland
+     ./buildme
+     touch ~/.bash_aliases
+     echo -e 'PATH=$PATH:/opt/vc/bin\nexport PATH' >> ~/.bash_aliases
+     echo -e 'LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/vc/lib\nexport LD_LIBRARY_PATH' >> ~/.bash_aliases
+     source ~/.bashrc
+     sudo ldconfig
+     sudo reboot now
+
+마지막 확인하기
+$ raspivid -p 0,0,640,480 -t 0
+
+python에서 opencv을 열어서 확인하기.
+
+webcam.py
+
+import cv2
+
+def show_webcam(mirror=False):
+    cam = cv2.VideoCapture(0)
+	while True:
+		ret_val, img = cam.read()
+		if mirror: 
+			img = cv2.flip(img, 1)
+		cv2.imshow('my webcam', img)
+		if cv2.waitKey(1) == 27: 
+			break  # esc to quit
+	cv2.destroyAllWindows()
+
+def main():
+	show_webcam(mirror=True)
+
+if __name__ == '__main__':
+	main()
 
 ```
