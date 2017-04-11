@@ -35,8 +35,6 @@ export PATH="/home/jaehyek/miniconda3/bin:$PATH"
 
 ```
 $ sudo apt-get update
-
-***For Python 3.4***
 $ sudo apt-get install python3-pip python3-dev
 
 $ wget https://github.com/samjabrahams/tensorflow-on-raspberry-pi/releases/download/v1.0.1/tensorflow-1.0.1-cp34-cp34m-linux_armv7l.whl <br/>
